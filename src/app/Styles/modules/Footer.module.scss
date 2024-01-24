@@ -1,0 +1,155 @@
+.footer_section {
+  padding: 1.3rem 8.33%;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  // color: #fff;
+
+  .footer_left_section {
+    width: 45%;
+
+    .logo_wrapper {
+      display: flex;
+      margin-bottom: 0.6rem;
+      align-items: center;
+
+      svg {
+        width: 1.4rem;
+        margin-right: 0.4rem;
+      }
+
+      p {
+        display: grid;
+        align-content: center;
+        gap: 0.1rem;
+        line-height: 1;
+        padding-top: 0.1rem;
+
+        span {
+          font-size: 0.55rem;
+          line-height: 1;
+
+          &:first-of-type {
+            font-weight: 600;
+          }
+        }
+
+      }
+    }
+
+    p {
+      font-size: 0.4rem;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+  }
+  
+  .footer_right_section {
+    width: 45%;
+    display: grid;
+    align-content: space-between;
+
+    .top_footer_links {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      .page_links {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.7rem;
+        font-size: 0.47rem;
+        font-weight: 400;
+        margin-right: 1.5rem;
+
+        a {
+          line-height: 1;
+        }
+      }
+
+      .member_linkedin {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 0.05rem;
+
+        svg {
+          width: 0.52rem;
+
+          height: max-content;
+        }
+      }
+
+    }
+
+    .bottom_footer_disclaimers {
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        font-size: 0.39rem;
+        font-weight: 400;
+        margin-right: 0.7rem;
+        
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}
+
+@media ( max-width: 768px ) {
+  .footer_section {
+    flex-direction: column;
+
+    .footer_left_section {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .footer_right_section {
+      width: 100%;
+
+      .top_footer_links {
+        // flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: start;
+        margin-bottom: 1rem;
+
+        .page_links {
+          width: 100%;
+          flex-wrap: wrap;
+          row-gap: 0.4rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .member_linkedin {
+          display: flex;
+          align-items: flex-end;
+          padding-bottom: 0.08rem;
+
+          svg {
+            width: 0.48rem;
+            height: 0.48rem;
+            // height: max-content;
+          }
+        }
+      }
+      .bottom_footer_disclaimers {
+        justify-content: flex-start;
+
+        a {
+          font-size: 0.35rem;
+          font-weight: 400;
+          margin-right: 0.5rem;
+          
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

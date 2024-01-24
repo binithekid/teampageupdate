@@ -1,0 +1,988 @@
+.leadership_section {
+  min-height: 100vh;
+  padding: 0;
+  overflow: visible;
+
+  .leadership_scene_wrapper {
+    position: sticky;
+    left: 0;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .intro_slider {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+
+      .initial_team_intro {
+        flex-shrink: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        position: relative;
+
+        .content_col {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          align-content: center;
+          padding: 0 8.33%;
+          position: relative;
+  
+          .leadership_title {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            color: transparent;
+            background-image: url("/Team_Members_bg.jpg");
+            background-clip: text;
+            -webkit-background-clip: text;
+            z-index: 2;
+          }
+  
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 43%;
+            z-index: 1;
+            background-color: var(--dark-blue);
+          }
+  
+          .scroll_to_slides {
+            font-size: 0.55rem;
+            color: var(--bg-color);
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            padding-left: 0.1rem;
+            font-weight: 400;
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+  
+            svg {
+              margin-left: 0.5rem;
+              width: 1rem;
+            }
+          }
+        }
+
+      }
+
+      .team_members_wrapper {
+        display: flex;
+        gap: 15vw;
+        will-change: transform;
+    
+        .memeber_card {
+          width: 12rem;
+          height: 15rem;
+          position: relative;
+          padding: 1.8rem 1.25rem;
+          border-top-right-radius: 2rem;
+          background-color: #d9d9d9;
+          flex-shrink: 0;
+          pointer-events: none;
+          will-change: transform;
+  
+          h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 0.4rem;
+            will-change: transform;
+          }
+          
+          span.position {
+            display: block;
+            letter-spacing: 0.02rem;
+            font-size: 0.5rem;
+            font-weight: 500;
+            text-transform: capitalize;
+          }
+    
+          .member_img {
+            width: 80%;
+            // height: 60%;
+            aspect-ratio: 1/1;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            will-change: transform;
+            img {
+              object-fit: contain;
+            }
+          }
+    
+          .member_card_hover_trigger {
+            position: absolute;
+            inset: -0.5rem;
+            perspective: 1000px;
+    
+            .member_card_hover_overlay {
+              width: 100%;
+              height: 0;
+              perspective: 1000px;
+              transform-style: preserve-3d;
+              overflow: hidden;
+              pointer-events: none;
+    
+              .member_card_hover_card_container {
+                transform-style: preserve-3d;
+                width: 100%;
+                height: 16rem;
+                background-color: rgba(0, 215, 210,1);
+                border-bottom-left-radius: 2rem;
+                padding: 1rem;
+    
+                .card_content {
+                  display: flex;
+    
+                  svg {
+                    width: 2rem;
+                    margin-right: 0.5rem;
+                  }
+    
+                  p {
+                    font-size: 0.68rem;
+                    padding-top: 0.1rem;
+                    font-weight: 600;
+                    line-height: 1.3;
+                    color: var(--primary-color);
+                  }
+                }
+    
+                .member_linkedin {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 2.5rem;
+                  height: 2.5rem;
+                  border-radius: 50%;
+                  position: absolute;
+                  left: 0.5rem;
+                  bottom: 0.5rem;
+                  background-color: var(--bg-color);
+                  padding: 0.8rem;
+                }
+    
+                .open_member_popup {
+                  position: absolute;
+                  bottom: 0.5rem;
+                  right: 0.5rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 1.8rem;
+                  height: 1.8rem;
+                  background-color: var(--dark-blue);
+                  color: var(--bg-color);
+                  border-radius: 50%;
+                  cursor: pointer;
+    
+                  svg {
+                    width: 1rem;
+                  }
+                }
+              }
+            }
+          }
+
+          .to_be_announced {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: var(--light-sec-color);
+            opacity: 0.7;
+            white-space: nowrap;
+            font-size: 0.85rem;
+            font-weight: 500;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+    .team_progress_bar_container {
+      position: absolute;
+      left: 50%;
+      top: 12%;
+      transform: translateX(-50%) translateY(-100px);
+      width: 50%;
+      height: 0.23rem;
+      border-radius: 1.1rem;
+      background-color: var(--dark-sec-color);
+      overflow: hidden;
+      z-index: 10;
+      opacity: 0;
+
+      .progress_bar {
+        height: 100%;
+        width: 13%;
+        background-color: var(--light-blue);
+        border-radius: 0.5rem;
+        will-change: transform;
+      }
+    }
+
+    .bg_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 75%;
+      height: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+
+      svg {
+        width:100%;
+        height: 100%;
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    .team_nav {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      display: flex;
+      gap: 0.75rem;
+      z-index: 10;
+      opacity: 0;
+
+      button {
+        outline: none;
+        background: transparent;
+        border: 0.07rem solid var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        cursor: pointer;
+        will-change: transform;
+
+        svg {
+          width: 0.8rem;
+        }
+      }
+
+      // .team_prev_button {
+      // }
+    }
+
+    .prev_slide_trigger_area {
+      position: absolute;
+      left: 0;
+      width: 24%;
+      top: 50%;
+      height: 60%;
+      transform: translateY(-50%);
+      // background-color: red;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .next_slide_trigger_area {
+      position: absolute;
+      right: 0;
+      width: 24%;
+      top: 50%;
+      height: 60%;
+      transform: translateY(-50%);
+      // background-color: blue;
+      z-index: 10;
+      pointer-events: none;
+    }
+  }
+
+  .investment_popup_container {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    z-index: 999;
+
+    .investment_popup_overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.7);
+      z-index: -1;
+      opacity: 0;
+
+      .close_popup_button {
+        position: absolute;
+        top: 0.75rem;
+        right: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: none;
+        outline: none;
+        background-color: var(--bg-color);
+        border-radius: 50%;
+        cursor: pointer;
+
+        svg {
+          width: 1rem;
+        }
+      }
+    }
+
+    .investment_popup_content_box {
+      width: 83.34%;
+      height: 92%;
+      padding: 2rem 1.5rem 0rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      background-color: var(--bg-color);
+      border-radius: 0.4rem;
+      transform: translateY(100%);
+
+      .left_person_photo {
+        width: 35%;
+        margin-right: 1rem;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        padding-bottom: 2rem;
+
+        .image_container {
+          width: 100%;
+          aspect-ratio: 1/1;
+          position: relative;
+        }
+
+      }
+
+      .content_container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        overflow: auto;
+        overscroll-behavior: contain;
+        align-content: flex-start;
+        padding-bottom: 2rem;
+
+        h3 {
+          font-size: 1rem;
+          height: max-content;
+          line-height: 1;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          width: 100%;
+          
+          span {
+            font-size: 0.45rem;
+            line-height: 1.3;
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.m_leadership_section {
+  min-height: 100vh;
+  padding: 0;
+  overflow: visible;
+  margin-bottom: 0;
+  // padding-top: 1rem;
+
+  .leadership_scene_wrapper {
+    // position: sticky;
+    // left: 0;
+    // top: 0;
+    // right: 0;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    align-items: center;
+    // padding-left: 38%;
+    // padding-left: 8.33%;
+
+    .intro_slider {
+      position: relative;
+      overflow: hidden;
+      height: auto;
+      flex-direction: column;
+      display: flex;
+      align-items: flex-start;
+      
+      .initial_team_intro {
+        flex-shrink: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        position: relative;
+
+        .content_col {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          align-content: center;
+          padding: 0 8.33%;
+          position: relative;
+          // background-image: url("/Team_Members_bg.jpg");
+          // background-size: cover;
+          // background-repeat: no-repeat;
+  
+          .leadership_title {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            color: transparent;
+            background-image: url("/Team_Members_bg.jpg");
+            background-clip: text;
+            -webkit-background-clip: text;
+            z-index: 2;
+          }
+  
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 43%;
+            z-index: 1;
+            background-color: var(--dark-blue);
+          }
+  
+          .scroll_to_slides {
+            font-size: 0.55rem;
+            color: var(--bg-color);
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            padding-left: 0.1rem;
+            font-weight: 400;
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+  
+            svg {
+              margin-left: 0.5rem;
+              width: 1rem;
+            }
+          }
+        }
+
+      }
+
+      .team_members_wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100svh;
+        position: relative;
+
+        .team_slider_scroller {
+          display: flex;
+          align-items: center;
+          padding: 3rem 0;
+
+
+          .card_memeber_wrapper {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // margin: 0 2%;
+          }
+
+          .memeber_card {
+            // margin-right: 3rem;
+            width: 11rem;
+            height: 14rem;
+            position: relative;
+            padding: 1.8rem 1.25rem;
+            border-top-right-radius: 2rem;
+            background-color: #d9d9d9;
+            flex-shrink: 0;
+
+            h2 {
+              font-size: 1.1rem;
+              font-weight: 600;
+              line-height: 1.1;
+              margin-bottom: 0.4rem;
+              will-change: transform;
+            }
+            
+            span.position {
+              display: block;
+              letter-spacing: 0.02rem;
+              font-size: 0.5rem;
+              font-weight: 500;
+              text-transform: capitalize;
+            }
+      
+            .member_img {
+              width: 80%;
+              // height: 60%;
+              aspect-ratio: 1/1;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              will-change: transform;
+              img {
+                object-fit: contain;
+              }
+            }
+
+            .member_linkedin {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 1.8rem;
+              height: 1.8rem;
+              border-radius: 50%;
+              position: absolute;
+              left: 0.4rem;
+              bottom: 0.4rem;
+              background-color: var(--bg-color);
+              padding: 0.6rem;
+            }
+      
+            .open_member_popup_mobile {
+              position: absolute;
+              bottom: 0.5rem;
+              right: 0.5rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 1.8rem;
+              height: 1.8rem;
+              background-color: var(--dark-blue);
+              color: var(--bg-color);
+              border-radius: 50%;
+              cursor: pointer;
+
+              svg {
+                width: 1rem;
+              }
+            }
+
+            .to_be_announced {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              color: var(--light-sec-color);
+              opacity: 0.7;
+              white-space: nowrap;
+              font-size: 0.85rem;
+              font-weight: 500;
+              font-style: italic;
+            }
+          }
+
+        }
+    
+      }
+    }
+
+    .team_progress_bar_container {
+      position: absolute;
+      left: 50%;
+      top: 13%;
+      transform: translateX(-50%);
+      width: 75%;
+      height: 0.3rem;
+      border-radius: 1.1rem;
+      background-color: var(--dark-sec-color);
+      overflow: hidden;
+      z-index: 10;
+      // opacity: 0;
+
+      .progress_bar {
+        height: 100%;
+        width: 13%;
+        background-color: var(--light-blue);
+        border-radius: 0.5rem;
+        will-change: transform;
+      }
+    }
+
+    .bg_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 100vw;
+      height: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+
+      svg {
+        width:100%;
+        height: 100%;
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    .team_nav {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+      // opacity: 0;
+
+      button {
+        outline: none;
+        background: transparent;
+        border: 0.07rem solid var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        will-change: transform;
+
+        svg {
+          width: 1rem;
+        }
+      }
+
+      // .team_prev_button {
+      // }
+    }
+
+    .prev_slide_trigger_area {
+      position: absolute;
+      left: 0;
+      width: 15%;
+      top: 50%;
+      height: 60%;
+      transform: translateY(-50%);
+      // background-color: red;
+      z-index: 10;
+      // pointer-events: none;
+    }
+    .next_slide_trigger_area {
+      position: absolute;
+      right: 0;
+      width: 15%;
+      top: 50%;
+      height: 60%;
+      transform: translateY(-50%);
+      // background-color: blue;
+      z-index: 10;
+      // pointer-events: none;
+    }
+  }
+
+  .investment_popup_container {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    z-index: 999;
+
+    .investment_popup_overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.7);
+      z-index: -1;
+      opacity: 0;
+
+      .close_popup_button {
+        position: absolute;
+        top: 0.75rem;
+        right: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: none;
+        outline: none;
+        background-color: var(--bg-color);
+        border-radius: 50%;
+        cursor: pointer;
+
+        svg {
+          width: 1rem;
+        }
+      }
+    }
+
+    .investment_popup_content_box {
+      width: 100%;
+      height: 92%;
+      padding: 2rem 1.5rem 0rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      background-color: var(--bg-color);
+      border-radius: 0.4rem;
+      transform: translateY(100%);
+
+      .left_person_photo {
+        width: 35%;
+        margin-right: 1rem;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        padding-bottom: 2rem;
+
+        .image_container {
+          width: 100%;
+          aspect-ratio: 1/1;
+          position: relative;
+        }
+
+      }
+
+      .content_container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        overflow: auto;
+        overscroll-behavior: contain;
+        align-content: flex-start;
+        padding-bottom: 2rem;
+
+        h3 {
+          font-size: 1rem;
+          height: max-content;
+          line-height: 1;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          width: 100%;
+          
+          span {
+            font-size: 0.45rem;
+            line-height: 1.3;
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: 1200px ) {
+  .leadership_section, .m_leadership_section {
+    .leadership_scene_wrapper {
+
+      .intro_slider {
+
+        .initial_team_intro {
+
+          .content_col {
+
+            .leadership_title {
+              font-size: 2rem;
+            }
+          }
+        }
+
+        .team_members_wrapper {
+          display: flex;
+          gap: 10vw;
+          will-change: transform;
+      
+          .memeber_card {
+            // width: 13rem;
+            // height: 15rem;
+            // position: relative;
+            // padding: 1.8rem 1.25rem;
+            // border-top-right-radius: 2rem;
+            // background-color: #d9d9d9;
+            // flex-shrink: 0;
+            // pointer-events: none;
+            // will-change: transform;
+          }
+        }
+      }
+    }
+  }
+}
+@media ( max-width: 768px ) {
+  .leadership_section, .m_leadership_section {
+    .leadership_scene_wrapper {
+
+      .intro_slider {
+
+        .initial_team_intro {
+          
+          .content_col {
+            background-position: center;
+            padding: 0 5%;
+
+            &::before {
+              content: "";
+              width: 45%;
+            }
+
+            .leadership_title {
+              font-size: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media ( max-width: 600px ) {
+  .leadership_section, .m_leadership_section {
+    .leadership_scene_wrapper {
+
+      .intro_slider {
+
+        .initial_team_intro {
+          
+          .content_col {
+            background-position: center;
+            // align-content: end;
+            padding-bottom: 5%;
+
+            &::before {
+              content: "";
+              width: 100%;
+              top: 50%;
+              right: 0;
+              transform: translateY(-55%);
+              height: 40%;
+            }
+
+            .leadership_title {
+              font-size: 2rem;
+            }
+          }
+        }
+
+        .team_members_wrapper {
+      
+          .memeber_card {
+            width: 11rem;
+            .to_be_announced {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+
+      .team_progress_bar_container {
+        // width: 60%;
+  
+        .progress_bar {
+          width: 15%;
+        }
+      }
+    }
+
+    .investment_popup_container {
+      position: fixed;
+      inset: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1.5rem;
+      z-index: 999;
+  
+      .investment_popup_overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0,0,0,0.7);
+        z-index: -1;
+        opacity: 0;
+  
+        .close_popup_button {
+          position: absolute;
+          top: 0.75rem;
+          right: 1rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: transparent;
+          border: none;
+          outline: none;
+          background-color: var(--bg-color);
+          border-radius: 50%;
+          cursor: pointer;
+  
+          svg {
+            width: 1rem;
+          }
+        }
+      }
+  
+      .investment_popup_content_box {
+        width: 100%;
+        height: 90%;
+        padding: 1.5rem 0.5rem 0 1rem !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        background-color: var(--bg-color);
+        border-radius: 0.4rem;
+        transform: translateY(100%);
+  
+        .left_person_photo {
+          margin: 0 auto;
+          width: 45%;
+          margin-bottom: 0.2rem;
+        }
+  
+        .content_container {
+          // padding-right: 1rem;
+        }
+      }
+    }
+  }
+}

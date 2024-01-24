@@ -1,0 +1,255 @@
+:root {
+  --curent-theme: 'light';
+  --bg-color: rgb(255, 255, 255);
+  --primary-color: rgb(0, 0, 0);
+  --dark-blue: rgb(10, 6, 43);
+  --light-blue: rgb(0, 215, 210);
+  --sec-color: rgb(252, 252, 252);
+  --dark-sec-color: #6e6e73;
+  --light-sec-color: rgb(140, 140, 140);
+  // --light-sec-color: rgba(101, 126, 253, 0.4);
+  // --light-sec-color: #657efd;
+  // --light-sec-color: #dcffdd;
+  // --light-sec-color: #00fff9;
+
+  --section-bottom-space: 25vh;
+  --section-half-bottom-space: 12.5vh;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+	font-size: calc(0.7rem + 1.4vw);
+	line-height: 1.5;
+	box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+  font-display: swap;
+  width: 100%;
+  position: relative;
+  // -webkit-font-smoothing: subpixel-antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  // overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "AvenirLTPro", Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &.smooth {
+    scroll-behavior: initial;
+    overscroll-behavior: contain;
+  }
+
+  &.native {
+    scroll-behavior: smooth;
+  }
+}
+
+.page_transition_wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .page_transition_logo {
+    z-index: 10;
+
+    svg {
+      opacity: 0;
+      width: 3rem;
+    }
+  }
+
+  #PageTransition {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+
+    path {
+      fill: var(--dark-blue);
+    }
+  }
+}
+
+video {
+  margin: 0;  
+  padding: 0;  
+  border: 0;
+  outline: none;
+  font-size: 100%;  
+  font: inherit;  
+  vertical-align: baseline; 
+  object-fit: cover;
+}
+
+button {
+  font-family: "AvenirLTPro", Arial, Helvetica, sans-serif;
+}
+
+// Lenis Recommended Settings
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+   pointer-events: none;
+} 
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  height: auto;
+  margin: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.page_overlay_bg {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--bg-color);
+}
+
+// Browser Scrollbar Customization
+::-webkit-scrollbar {
+  width: 0.1rem;
+}
+::-webkit-scrollbar-track {
+  background: rgba($color: #000000, $alpha: 0); 
+}
+  ::-webkit-scrollbar-thumb {
+  background: #8c8c8c; 
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color: #8c8c8c, $alpha: 0.7); 
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+a, button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.page_wrapper {
+  position: relative;
+  // overflow: hidden;
+}
+
+.cursor_container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0 15%;
+  margin-bottom: var(--section-bottom-space);
+}
+
+.section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: var(--section-bottom-space);
+}
+
+@media ( min-width: 2500px ) {
+
+  html {
+	  font-size: calc(1.5rem + 1.2vw);
+  }
+}
+
+@media ( max-width: 1200px ) {
+  :root {
+    --section-bottom-space: 20vh;
+    --heading-bottom-space: 12.5vh;
+  }
+  .container {
+    padding: 0 6%;
+  }
+}
+
+@media ( max-width: 900px ) {
+  html {
+	  font-size: calc(0.65rem + 1.3vw);
+  }
+}
+
+@media ( max-width: 768px ) {
+
+  html {
+	  font-size: calc(0.9rem + 1.5vw);
+  }
+  .container {
+    padding: 0 5%;
+  }
+}
+
+@media ( max-width: 500px ) {
+
+  html {
+	  font-size: calc(1.1rem + 2vw);
+  }
+}

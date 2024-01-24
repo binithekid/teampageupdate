@@ -1,0 +1,248 @@
+.identity_section {
+  min-height: 100vh;
+  overflow: visible;
+  margin-bottom: 0;
+  margin-top: -25svh;
+
+  .content_wrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100svh;
+    // overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > h3 {
+      font-size: 12cqw;
+      letter-spacing: -0.02rem;
+      will-change: transform;
+      white-space: nowrap;
+    }
+
+    .identity_cards_container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+      .identity_card {
+        padding: 1rem;
+        border-radius: 1.5rem;
+        width: 12rem;
+        height: 15rem;
+        display: grid;
+        align-content: start;
+        will-change: transform;
+        padding-top: 2.5rem;
+        overflow: hidden;
+
+        .identity_card_logo {
+          position: absolute;
+          top: 0.6rem;
+          right: 0.9rem;
+          width: 0.9rem;
+          height: 0.9rem;
+          color: var(--bg-color);
+
+          svg {
+            fill: var(--bg-color);
+            width: 0.9rem;
+            height: 0.9rem;
+          }
+        }
+
+        h3 {
+          font-size: 0.7rem;
+          color: var(--bg-color);
+          line-height: 1.1;
+          font-weight: 600;
+          margin-bottom: 0.8rem;
+          will-change: transform;
+          text-align: center;
+        }
+
+        p {
+          font-size: 0.45rem;
+          font-weight: 300;
+          color: var(--bg-color);
+          line-height: 1.25;
+          will-change: transform;
+          text-align: center;
+        }
+
+        .identity_card_img {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 45%;
+
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .identity_section {
+    min-height: auto;
+    // margin-top: 0;
+    overflow: hidden;
+
+    .content_wrapper {
+      position: static;
+      flex-direction: column;
+      height: auto;
+      // top: 25svh;
+      // left: 0;
+      // height: 50svh;
+
+      > h3 {
+        margin-bottom: 1rem;
+      }
+
+      .identity_cards_container {
+        position: static;
+        height: auto;
+        // width: 100%;
+        // height: 100%;
+        // left: 0;
+        // right: 0;
+        // top: 0;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        gap: 0.5rem;
+
+        .identity_card {
+          padding: 0.7rem;
+          // border-radius: 1.5rem;
+          // width: 12rem;
+          // height: 15rem;
+          // display: grid;
+          // align-content: start;
+          // will-change: transform;
+          // overflow: hidden;
+          padding-top: 2.5rem;
+
+          // .identity_card_logo {
+          //   position: absolute;
+          //   top: 0.6rem;
+          //   right: 0.9rem;
+          //   width: 0.9rem;
+          //   height: 0.9rem;
+          //   color: var(--bg-color);
+
+          //   svg {
+          //     fill: var(--bg-color);
+          //     width: 0.9rem;
+          //     height: 0.9rem;
+          //   }
+          // }
+
+          h3 {
+            font-size: 0.6rem;
+            margin-bottom: 0.5rem;
+            // color: var(--bg-color);
+            // line-height: 1.1;
+            // font-weight: 600;
+            // will-change: transform;
+            // text-align: center;
+          }
+
+          p {
+            font-size: 0.43rem;
+            // font-weight: 300;
+            // color: var(--bg-color);
+            // line-height: 1.25;
+            // will-change: transform;
+            // text-align: center;
+          }
+
+          // .identity_card_img {
+          //   position: absolute;
+          //   bottom: 0;
+          //   left: 0;
+          //   right: 0;
+          //   height: 45%;
+
+          //   img {
+          //     object-fit: contain;
+          //   }
+          // }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .identity_section {
+    margin-top: 0;
+    margin-bottom: 6rem;
+    .content_wrapper {
+      > h3 {
+        margin-bottom: 0;
+      }
+
+      .identity_cards_container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-top: 1.8rem;
+
+        .identity_card {
+          width: 100%;
+          flex-shrink: 1;
+          height: 12rem;
+          // height: 7rem;
+          padding-top: 2rem;
+          border-radius: 1rem;
+          padding-right: 1rem;
+          padding-left: 1rem;
+          // align-content: center;
+
+          .identity_card_logo {
+            top: 0.3rem;
+            right: 0.7rem;
+            width: 0.7rem;
+            height: 0.7rem;
+
+            svg {
+              fill: var(--bg-color);
+              width: 0.7rem;
+              height: 0.7rem;
+            }
+          }
+
+          h3 {
+            font-size: 0.7rem;
+            line-height: 1.1;
+            margin-bottom: 0.6rem;
+          }
+
+          p {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 0.43rem;
+            line-height: 1.2;
+          }
+
+          .identity_card_img {
+          }
+        }
+      }
+    }
+  }
+}

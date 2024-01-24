@@ -1,0 +1,166 @@
+.missions_section {
+  position: relative;
+  overflow: visible;
+  padding: 0;
+  margin-bottom: var(--section-bottom-space);
+
+  .missions_sticky_container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100svh;
+    z-index: 10;
+    // padding: 0 8.33%;
+    pointer-events: none;
+    
+    .heading_container {
+      width: 44%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 100;
+      background: var(--bg-color);
+      padding-bottom: 1rem;
+
+      h4 {
+        font-size: 2.3rem;
+        line-height: 1;
+        height: fit-content;
+        text-align: center;
+        pointer-events: all;
+        color: var(--bg-color);
+        position: relative;
+        z-index: 10;
+      }
+
+      .fixed_image_container {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+          position: absolute;
+          // inset: 0;
+          // object-fit: cover;
+          // object-position: right;
+          left: 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.4);
+          z-index: 2;
+        }
+      }
+    }
+
+    .fixed_bullet_point {
+      position: absolute;
+      top: 40.5svh;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background-color: var(--dark-blue);
+      transform: translate(-45%,0%);
+      z-index: 10;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform: translate(-50%,-48%) scale(0.35);
+        background-color: var(--bg-color);
+      }
+    }
+
+    .vertical_line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 0.07rem;
+      background-color: var(--light-sec-color);
+      will-change: transform;
+    }
+  }
+
+  .missions_wrapper {
+      position: relative;
+      width: 52%;
+      padding-right: 8.33%;
+      margin: 40svh 0;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(-100svh);
+      // padding: 0;
+
+      .mission_item_container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+        flex-shrink: 0;
+        gap: 0.75rem;
+        
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        .mission_left_part {
+          width: 47%;
+          flex-shrink: 0;
+          display: flex;
+          justify-content: flex-end;
+
+          span.we_will {
+            font-size: 1rem;
+            display: block;
+            white-space: nowrap;
+            font-weight: 400;
+            margin-right: 0.25rem;
+            line-height: 1;
+            color: var(--dark-blue);
+          }
+
+          h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1;
+            position: relative;
+            text-align: right;
+            color: var(--dark-blue);
+            transition: color 0.3s ease-out;
+          }
+
+        }
+
+        .mission_right_part {
+          width: 100%;
+          width: 53%;
+          flex-shrink: 0;
+
+          p {
+            width: 90%;
+            font-size: 0.5rem;
+            line-height: 1.25;
+          }
+        }
+        
+      }
+    
+  }
+}
