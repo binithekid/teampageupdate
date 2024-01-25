@@ -1,5 +1,5 @@
 :root {
-  --curent-theme: 'light';
+  --curent-theme: "light";
   --bg-color: rgb(255, 255, 255);
   --primary-color: rgb(0, 0, 0);
   --dark-blue: rgb(10, 6, 43);
@@ -19,16 +19,16 @@
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
-	font-size: calc(0.7rem + 1.4vw);
-	line-height: 1.5;
-	box-sizing: border-box;
+  font-size: calc(0.7rem + 1.4vw);
+  line-height: 1.5;
+  box-sizing: border-box;
   margin: 0;
-	padding: 0;
+  padding: 0;
 }
 
 html,
@@ -91,13 +91,13 @@ body {
 }
 
 video {
-  margin: 0;  
-  padding: 0;  
+  margin: 0;
+  padding: 0;
   border: 0;
   outline: none;
-  font-size: 100%;  
-  font: inherit;  
-  vertical-align: baseline; 
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
   object-fit: cover;
 }
 
@@ -123,8 +123,8 @@ html.lenis {
 }
 
 .lenis.lenis-scrolling iframe {
-   pointer-events: none;
-} 
+  pointer-events: none;
+}
 
 body {
   background-color: var(--bg-color);
@@ -150,14 +150,14 @@ body {
   width: 0.1rem;
 }
 ::-webkit-scrollbar-track {
-  background: rgba($color: #000000, $alpha: 0); 
+  background: rgba($color: #000000, $alpha: 0);
 }
-  ::-webkit-scrollbar-thumb {
-  background: #8c8c8c; 
+::-webkit-scrollbar-thumb {
+  background: #8c8c8c;
   border-radius: 1rem;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba($color: #8c8c8c, $alpha: 0.7); 
+  background: rgba($color: #8c8c8c, $alpha: 0.7);
 }
 
 p {
@@ -165,13 +165,19 @@ p {
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
   font-weight: 500;
 }
 
-a, button {
+a,
+button {
   font-family: inherit;
 }
 
@@ -214,14 +220,13 @@ li {
   margin-bottom: var(--section-bottom-space);
 }
 
-@media ( min-width: 2500px ) {
-
+@media (min-width: 2500px) {
   html {
-	  font-size: calc(1.5rem + 1.2vw);
+    font-size: calc(1.5rem + 1.2vw);
   }
 }
 
-@media ( max-width: 1200px ) {
+@media (max-width: 1200px) {
   :root {
     --section-bottom-space: 20vh;
     --heading-bottom-space: 12.5vh;
@@ -231,25 +236,28 @@ li {
   }
 }
 
-@media ( max-width: 900px ) {
+@media (max-width: 900px) {
   html {
-	  font-size: calc(0.65rem + 1.3vw);
+    font-size: calc(0.65rem + 1.3vw);
   }
 }
 
-@media ( max-width: 768px ) {
-
+@media (max-width: 768px) {
   html {
-	  font-size: calc(0.9rem + 1.5vw);
+    font-size: calc(0.9rem + 1.5vw);
   }
   .container {
     padding: 0 5%;
   }
 }
 
-@media ( max-width: 500px ) {
-
+@media (max-width: 500px) {
   html {
-	  font-size: calc(1.1rem + 2vw);
+    font-size: calc(1.1rem + 2vw);
   }
+}
+
+//Stops page from scrolling when pop up is open on the "Team" page
+.popup-open {
+  overflow: hidden;
 }
