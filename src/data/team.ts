@@ -130,6 +130,7 @@ export const investmentTeam = [
   {
     name: "Thor Johnsen",
     position: "Managing Partner",
+    summary: `Fund Manager, Digital 9 Infra Plc Fund Manager, Arcapita 2.8x Realised Gross MOIC ($2bn Returned) `,
     linkedinUrl: "https://www.linkedin.com/in/58753/",
     img: ThorImg,
     content: [
@@ -145,6 +146,7 @@ export const investmentTeam = [
   {
     name: "Andre Karihaloo",
     position: "Partner, Head of Origination ",
+    summary: `Snr. Director, Digital 9 Infra Plc HSBC, Investment Management Built $261m EBITDA portfolio`,
     linkedinUrl: "https://www.linkedin.com/in/andrekarihaloo/",
     img: AndreImg,
     content: [
@@ -159,6 +161,7 @@ export const investmentTeam = [
   {
     name: "Marco Vetrone",
     position: "CFO & COO",
+    summary: `Managing Director & COO, CPP Led CPP Ops from >$125bn to >$430bn (3) CPA/CA and CFA Designations`,
     linkedinUrl: "https://www.linkedin.com/in/marcovetrone/",
     img: MarcoImg,
     content: [
@@ -174,6 +177,7 @@ export const investmentTeam = [
   {
     name: "Laura Fernandez",
     position: "Head of Sustainable Connectivity & ESG",
+    summary: "summary goes here",
     linkedinUrl: "https://www.linkedin.com/in/fernandez-laura/",
     img: LauraImg,
     content: [
@@ -187,6 +191,7 @@ export const investmentTeam = [
   {
     name: "Charlotte Johnsen",
     position: "General Counsel",
+    summary: `Counsel Linklaters, 15+ Years Corporate M&A and Financial Regulation`,
     linkedinUrl: "https://www.linkedin.com/in/charlotte-johnsen-031085aa/",
     img: CharlotteImg,
     content: [
@@ -202,6 +207,7 @@ export const investmentTeam = [
   {
     name: "Jack McWhinnie",
     position: "Vice President",
+    summary: `Associate, Digital 9 Infra Plc Analyst, Digital Alpha ($2.5bn AUM) 4-Years & $2bn+ Digital Infra Transactions`,
     linkedinUrl: "https://www.linkedin.com/in/jackmcwhinnie/",
     img: JackImg,
     content: [
@@ -217,6 +223,7 @@ export const investmentTeam = [
   {
     name: "Alex Norton",
     position: "Associate",
+    summary: "summary goes here",
     linkedinUrl: "https://www.linkedin.com/in/alexenorton/",
     img: AlexImg,
     content: [
@@ -235,6 +242,7 @@ export const operatingPartners = [
     position: "Operating Partner",
     linkedinUrl: "https://www.linkedin.com/in/elaine-bucknor/",
     img: ElaineImg,
+    summary: "summary goes here",
     content: [
       `Elaine has over 25 years of experience in the technology industry. Her last executive role was at Sky, one of Europe’s leading broadcasting and media companies and one of the UK’s largest telecommunications and mobile businesses, where she worked for over ten years and was an integral part of its senior leadership team, with overall responsibility for the Sky group’s technology strategy.`,
       `Elaine was Group Chief Information Security Officer at Sky and prior to that, Group Director - Strategy, Security and Governance within Sky's Technology division, and a member of its Executive Leadership Team. In her role, Elaine was responsible for the overall strategic direction and governance for Group Technology at Sky, ensuring the development and delivery of its large-scale international technology programmes across broadcast and digital platforms, network infrastructure and IT.`,
@@ -249,6 +257,7 @@ export const operatingPartners = [
   {
     name: "Tami Erwin",
     position: "Operating Partner",
+    summary: "summary goes here",
     linkedinUrl: "https://www.linkedin.com/in/tamierwin/",
     img: TamiImg,
     content: [
@@ -265,6 +274,7 @@ export const operatingPartners = [
   {
     name: "Susanna Kass",
     position: "Operating Partner",
+    summary: "summary goes here",
     linkedinUrl: "https://www.linkedin.com/in/susanna-kass-6753768/",
     img: SusannaImg,
     content: [
@@ -280,6 +290,7 @@ export const operatingPartners = [
   {
     name: "Neil McRae",
     position: "Operating Partner",
+    summary: "summary goes here",
     linkedinUrl: "https://www.linkedin.com/in/neilmcrae/",
     img: NeilImg,
     content: [
@@ -299,6 +310,7 @@ export const operatingPartners = [
   {
     name: "Kevin O’Hara",
     position: "Operating Partner",
+    summary: "summary goes here",
     linkedinUrl: "https://www.linkedin.com/in/kevinjamesohara/",
     img: KevinImg,
     content: [

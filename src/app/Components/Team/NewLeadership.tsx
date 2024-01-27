@@ -691,6 +691,7 @@ const MemberCard = ({
       overwrite: true,
     });
   };
+
   const memberCardHoverOut = (e: any) => {
     // console.log("mouse out card")
     gsap.to(cardOverlayRef.current, {

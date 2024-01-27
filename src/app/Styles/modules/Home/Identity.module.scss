@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
 
-    > h3 {
+    >h3 {
       font-size: 12cqw;
       letter-spacing: -0.02rem;
       will-change: transform;
@@ -92,9 +92,10 @@
       }
     }
   }
+
 }
 
-@media (max-width: 768px) {
+@media ( max-width: 768px ) {
   .identity_section {
     min-height: auto;
     // margin-top: 0;
@@ -108,7 +109,7 @@
       // left: 0;
       // height: 50svh;
 
-      > h3 {
+      >h3 {
         margin-bottom: 1rem;
       }
 
@@ -124,7 +125,7 @@
         // justify-content: space-between;
         // align-items: center;
         gap: 0.5rem;
-
+  
         .identity_card {
           padding: 0.7rem;
           // border-radius: 1.5rem;
@@ -135,7 +136,7 @@
           // will-change: transform;
           // overflow: hidden;
           padding-top: 2.5rem;
-
+  
           // .identity_card_logo {
           //   position: absolute;
           //   top: 0.6rem;
@@ -143,14 +144,14 @@
           //   width: 0.9rem;
           //   height: 0.9rem;
           //   color: var(--bg-color);
-
+  
           //   svg {
           //     fill: var(--bg-color);
           //     width: 0.9rem;
           //     height: 0.9rem;
           //   }
           // }
-
+  
           h3 {
             font-size: 0.6rem;
             margin-bottom: 0.5rem;
@@ -160,7 +161,7 @@
             // will-change: transform;
             // text-align: center;
           }
-
+  
           p {
             font-size: 0.43rem;
             // font-weight: 300;
@@ -169,14 +170,14 @@
             // will-change: transform;
             // text-align: center;
           }
-
+  
           // .identity_card_img {
           //   position: absolute;
           //   bottom: 0;
           //   left: 0;
           //   right: 0;
           //   height: 45%;
-
+  
           //   img {
           //     object-fit: contain;
           //   }
@@ -187,12 +188,13 @@
   }
 }
 
-@media (max-width: 600px) {
+@media ( max-width: 600px ) {
   .identity_section {
     margin-top: 0;
     margin-bottom: 6rem;
     .content_wrapper {
-      > h3 {
+
+      >h3 {
         margin-bottom: 0;
       }
 
@@ -218,14 +220,14 @@
             right: 0.7rem;
             width: 0.7rem;
             height: 0.7rem;
-
+  
             svg {
               fill: var(--bg-color);
               width: 0.7rem;
               height: 0.7rem;
             }
           }
-
+          
           h3 {
             font-size: 0.7rem;
             line-height: 1.1;
@@ -244,5 +246,6 @@
         }
       }
     }
+
   }
 }

@@ -1,14 +1,13 @@
 import { TeamSection } from "../../Components/Team/TeamSlider";
 import { TeamQuoteSection } from "../../Components/Team/QuoteSection";
-import { Team } from "../../Components/Team/Team";
+import { TeamGrid } from "../../Components/Team/TeamGrid";
 
 export default function About() {
   return (
     <main>
-      {/* <TeamSection />
-
-      <TeamQuoteSection /> */}
-      <Team />
+      {/* <TeamSection /> */}
+      <TeamGrid />
+      <TeamQuoteSection />
     </main>
   );
 }

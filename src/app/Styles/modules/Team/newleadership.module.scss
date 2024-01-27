@@ -33,7 +33,7 @@
           align-content: center;
           padding: 0 8.33%;
           position: relative;
-  
+
           .leadership_title {
             font-size: 2.5rem;
             line-height: 1.2;
@@ -46,7 +46,7 @@
             -webkit-background-clip: text;
             z-index: 2;
           }
-  
+
           &::before {
             content: "";
             position: absolute;
@@ -57,7 +57,7 @@
             z-index: 1;
             background-color: var(--dark-blue);
           }
-  
+
           .scroll_to_slides {
             font-size: 0.55rem;
             color: var(--bg-color);
@@ -70,21 +70,20 @@
             border: none;
             outline: none;
             cursor: pointer;
-  
+
             svg {
               margin-left: 0.5rem;
               width: 1rem;
             }
           }
         }
-
       }
 
       .team_members_wrapper {
         display: flex;
         gap: 15vw;
         will-change: transform;
-    
+
         .memeber_card {
           width: 12rem;
           height: 15rem;
@@ -95,7 +94,7 @@
           flex-shrink: 0;
           pointer-events: none;
           will-change: transform;
-  
+
           h2 {
             font-size: 1.1rem;
             font-weight: 600;
@@ -103,7 +102,7 @@
             margin-bottom: 0.4rem;
             will-change: transform;
           }
-          
+
           span.position {
             display: block;
             letter-spacing: 0.02rem;
@@ -111,7 +110,7 @@
             font-weight: 500;
             text-transform: capitalize;
           }
-    
+
           .member_img {
             width: 80%;
             // height: 60%;
@@ -125,12 +124,12 @@
               object-fit: contain;
             }
           }
-    
+
           .member_card_hover_trigger {
             position: absolute;
             inset: -0.5rem;
             perspective: 1000px;
-    
+
             .member_card_hover_overlay {
               width: 100%;
               height: 0;
@@ -138,23 +137,23 @@
               transform-style: preserve-3d;
               overflow: hidden;
               pointer-events: none;
-    
+
               .member_card_hover_card_container {
                 transform-style: preserve-3d;
                 width: 100%;
                 height: 16rem;
-                background-color: rgba(0, 215, 210,1);
+                background-color: rgba(0, 215, 210, 1);
                 border-bottom-left-radius: 2rem;
                 padding: 1rem;
-    
+
                 .card_content {
                   display: flex;
-    
+
                   svg {
                     width: 2rem;
                     margin-right: 0.5rem;
                   }
-    
+
                   p {
                     font-size: 0.68rem;
                     padding-top: 0.1rem;
@@ -163,7 +162,7 @@
                     color: var(--primary-color);
                   }
                 }
-    
+
                 .member_linkedin {
                   display: flex;
                   justify-content: center;
@@ -177,7 +176,7 @@
                   background-color: var(--bg-color);
                   padding: 0.8rem;
                 }
-    
+
                 .open_member_popup {
                   position: absolute;
                   bottom: 0.5rem;
@@ -191,7 +190,7 @@
                   color: var(--bg-color);
                   border-radius: 50%;
                   cursor: pointer;
-    
+
                   svg {
                     width: 1rem;
                   }
@@ -204,7 +203,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             color: var(--light-sec-color);
             opacity: 0.7;
             white-space: nowrap;
@@ -242,7 +241,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       width: 75%;
       height: 30%;
       display: flex;
@@ -251,7 +250,7 @@
       padding: 0 1rem;
 
       svg {
-        width:100%;
+        width: 100%;
         height: 100%;
       }
 
@@ -328,7 +327,7 @@
     .investment_popup_overlay {
       position: absolute;
       inset: 0;
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.7);
       z-index: -1;
       opacity: 0;
 
@@ -378,7 +377,6 @@
           aspect-ratio: 1/1;
           position: relative;
         }
-
       }
 
       .content_container {
@@ -399,7 +397,7 @@
 
         p {
           width: 100%;
-          
+
           span {
             font-size: 0.45rem;
             line-height: 1.3;
@@ -438,7 +436,7 @@
       flex-direction: column;
       display: flex;
       align-items: flex-start;
-      
+
       .initial_team_intro {
         flex-shrink: 0;
         width: 100vw;
@@ -456,7 +454,7 @@
           // background-image: url("/Team_Members_bg.jpg");
           // background-size: cover;
           // background-repeat: no-repeat;
-  
+
           .leadership_title {
             font-size: 2.5rem;
             line-height: 1.2;
@@ -469,7 +467,7 @@
             -webkit-background-clip: text;
             z-index: 2;
           }
-  
+
           &::before {
             content: "";
             position: absolute;
@@ -480,7 +478,7 @@
             z-index: 1;
             background-color: var(--dark-blue);
           }
-  
+
           .scroll_to_slides {
             font-size: 0.55rem;
             color: var(--bg-color);
@@ -493,14 +491,13 @@
             border: none;
             outline: none;
             cursor: pointer;
-  
+
             svg {
               margin-left: 0.5rem;
               width: 1rem;
             }
           }
         }
-
       }
 
       .team_members_wrapper {
@@ -514,7 +511,6 @@
           display: flex;
           align-items: center;
           padding: 3rem 0;
-
 
           .card_memeber_wrapper {
             width: 100vw;
@@ -541,7 +537,7 @@
               margin-bottom: 0.4rem;
               will-change: transform;
             }
-            
+
             span.position {
               display: block;
               letter-spacing: 0.02rem;
@@ -549,7 +545,7 @@
               font-weight: 500;
               text-transform: capitalize;
             }
-      
+
             .member_img {
               width: 80%;
               // height: 60%;
@@ -577,7 +573,7 @@
               background-color: var(--bg-color);
               padding: 0.6rem;
             }
-      
+
             .open_member_popup_mobile {
               position: absolute;
               bottom: 0.5rem;
@@ -601,7 +597,7 @@
               position: absolute;
               top: 50%;
               left: 50%;
-              transform: translate(-50%,-50%);
+              transform: translate(-50%, -50%);
               color: var(--light-sec-color);
               opacity: 0.7;
               white-space: nowrap;
@@ -610,9 +606,7 @@
               font-style: italic;
             }
           }
-
         }
-    
       }
     }
 
@@ -642,7 +636,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       width: 100vw;
       height: 30%;
       display: flex;
@@ -651,7 +645,7 @@
       padding: 0 1rem;
 
       svg {
-        width:100%;
+        width: 100%;
         height: 100%;
       }
 
@@ -728,7 +722,7 @@
     .investment_popup_overlay {
       position: absolute;
       inset: 0;
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.7);
       z-index: -1;
       opacity: 0;
 
@@ -778,7 +772,6 @@
           aspect-ratio: 1/1;
           position: relative;
         }
-
       }
 
       .content_container {
@@ -799,7 +792,7 @@
 
         p {
           width: 100%;
-          
+
           span {
             font-size: 0.45rem;
             line-height: 1.3;
@@ -812,16 +805,13 @@
   }
 }
 
-@media ( max-width: 1200px ) {
-  .leadership_section, .m_leadership_section {
+@media (max-width: 1200px) {
+  .leadership_section,
+  .m_leadership_section {
     .leadership_scene_wrapper {
-
       .intro_slider {
-
         .initial_team_intro {
-
           .content_col {
-
             .leadership_title {
               font-size: 2rem;
             }
@@ -832,7 +822,7 @@
           display: flex;
           gap: 10vw;
           will-change: transform;
-      
+
           .memeber_card {
             // width: 13rem;
             // height: 15rem;
@@ -849,14 +839,12 @@
     }
   }
 }
-@media ( max-width: 768px ) {
-  .leadership_section, .m_leadership_section {
+@media (max-width: 768px) {
+  .leadership_section,
+  .m_leadership_section {
     .leadership_scene_wrapper {
-
       .intro_slider {
-
         .initial_team_intro {
-          
           .content_col {
             background-position: center;
             padding: 0 5%;
@@ -875,14 +863,12 @@
     }
   }
 }
-@media ( max-width: 600px ) {
-  .leadership_section, .m_leadership_section {
+@media (max-width: 600px) {
+  .leadership_section,
+  .m_leadership_section {
     .leadership_scene_wrapper {
-
       .intro_slider {
-
         .initial_team_intro {
-          
           .content_col {
             background-position: center;
             // align-content: end;
@@ -904,7 +890,6 @@
         }
 
         .team_members_wrapper {
-      
           .memeber_card {
             width: 11rem;
             .to_be_announced {
@@ -916,7 +901,7 @@
 
       .team_progress_bar_container {
         // width: 60%;
-  
+
         .progress_bar {
           width: 15%;
         }
@@ -931,14 +916,14 @@
       align-items: center;
       padding-top: 1.5rem;
       z-index: 999;
-  
+
       .investment_popup_overlay {
         position: absolute;
         inset: 0;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0, 0, 0, 0.7);
         z-index: -1;
         opacity: 0;
-  
+
         .close_popup_button {
           position: absolute;
           top: 0.75rem;
@@ -954,13 +939,13 @@
           background-color: var(--bg-color);
           border-radius: 50%;
           cursor: pointer;
-  
+
           svg {
             width: 1rem;
           }
         }
       }
-  
+
       .investment_popup_content_box {
         width: 100%;
         height: 90%;
@@ -972,13 +957,13 @@
         background-color: var(--bg-color);
         border-radius: 0.4rem;
         transform: translateY(100%);
-  
+
         .left_person_photo {
           margin: 0 auto;
           width: 45%;
           margin-bottom: 0.2rem;
         }
-  
+
         .content_container {
           // padding-right: 1rem;
         }
