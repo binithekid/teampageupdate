@@ -5,11 +5,7 @@ import styles from "../../Styles/modules/Team/teampage.module.scss";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { calcPosValues } from "../../utils";
-import {
-  teamMembersData,
-  operatingPartners,
-  investmentTeam,
-} from "../../../data/team";
+import { teamMembersData } from "../../../data/team";
 import gsap from "gsap";
 import { ContextTypes } from "../../Types";
 import AppContext from "../../Context/AppContext";
@@ -245,7 +241,7 @@ const MemberCard = ({
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="38"
+                width="20"
                 height="37"
                 viewBox="0 0 38 37"
                 fill="none"
@@ -291,8 +287,17 @@ export const TeamGrid = () => {
   const popupContainerRef = useRef(null);
   const popupOverlayRef = useRef(null);
   const popupContentBox = useRef(null);
-
   const popupContentVideo = useRef<HTMLVideoElement>(null);
+
+  const teamGridRef = useRef<any>(null);
+
+  const { smoothScroller } = useContext<ContextTypes>(AppContext);
+
+  const scrollToSlides = () => {
+    smoothScroller.scrollTo(teamGridRef.current.offsetTop, {
+      duration: 3,
+    });
+  };
 
   const openInvestmentPopup = (idx: number) => {
     setPersonImgSrc(teamMembersData[idx].img);
@@ -318,12 +323,45 @@ export const TeamGrid = () => {
 
   return (
     <section className={styles.team_section}>
-      <div className={styles.grid_wrapper}>
-        <div className={styles.title_wrapper}>
-          <p>Investment Team</p>
+      <div className={styles.initial_team_intro}>
+        <div className={styles.content_col}>
+          <Image
+            src={"/Team_Members_bg.jpg"}
+            alt="Leadership"
+            fill
+            sizes="100vw"
+            loading="eager"
+          />
+          <h1 className={styles.leadership_title}>
+            Deep
+            <br />
+            Domain
+            <br />
+            Expertise.
+          </h1>
+
+          <button onClick={scrollToSlides} className={styles.scroll_to_slides}>
+            Senior leadership team
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </button>
         </div>
+      </div>
+      <div className={styles.grid_wrapper} ref={teamGridRef}>
         <div className={styles.team_grid_container}>
-          {investmentTeam.map((memeberData, idx) => (
+          {teamMembersData.map((memeberData, idx) => (
             <div className={styles.team_member} key={memeberData.name}>
               <MemberCard
                 {...memeberData}
@@ -333,24 +371,6 @@ export const TeamGrid = () => {
               />
             </div>
           ))}
-        </div>
-
-        <div className={styles.grid_wrapper}>
-          <div className={styles.title_wrapper}>
-            <p>Operating Partners</p>
-          </div>
-          <div className={styles.team_grid_container}>
-            {operatingPartners.map((memeberData, idx) => (
-              <div className={styles.team_member} key={memeberData.name}>
-                <MemberCard
-                  {...memeberData}
-                  key={memeberData.name}
-                  openInvestmentPopup={openInvestmentPopup}
-                  idx={idx}
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 

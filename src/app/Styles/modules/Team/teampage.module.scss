@@ -2,10 +2,73 @@
   padding: 0;
   overflow: hidden;
 
+  .initial_team_intro {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: relative;
+
+    .content_col {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      align-content: center;
+      padding: 0 8.33%;
+      position: relative;
+      // background-image: url("/Team_Members_bg.jpg");
+      // background-size: cover;
+      // background-repeat: no-repeat;
+
+      .leadership_title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+        color: transparent;
+        background-image: url("/Team_Members_bg.jpg");
+        background-clip: text;
+        -webkit-background-clip: text;
+        z-index: 2;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 43%;
+        z-index: 1;
+        background-color: var(--dark-blue);
+      }
+
+      .scroll_to_slides {
+        font-size: 0.55rem;
+        color: var(--bg-color);
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        padding-left: 0.1rem;
+        font-weight: 400;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        svg {
+          margin-left: 0.5rem;
+          width: 1rem;
+        }
+      }
+    }
+  }
+
   .grid_wrapper {
     display: flex;
     width: 100vw;
-
+    margin-top: 3rem;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -22,6 +85,7 @@
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
+    margin-bottom: 4rem;
     justify-content: center;
 
     .team_member {
@@ -43,7 +107,7 @@
 
       .member_card {
         width: 10rem;
-        height: 15rem;
+        height: 13rem;
         padding: 1.4rem 1rem;
         border-top-right-radius: 2rem;
         background-color: #d9d9d9;
@@ -109,10 +173,18 @@
             .member_card_hover_card_container {
               transform-style: preserve-3d;
               width: 100%;
-              height: 16rem;
+              height: 14rem;
               background-color: rgba(0, 215, 210, 1);
               border-bottom-left-radius: 2rem;
               padding: 1rem;
+
+              @media screen and (max-width: 770px) {
+                height: 16rem;
+              }
+
+              // @media screen and (max-width: 600px) {
+              //   height: 15rem;
+              // }
 
               .card_content {
                 display: flex;
@@ -135,32 +207,32 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 2.5rem;
-                height: 2.5rem;
+                width: 1.5rem;
+                height: 1.5rem;
                 border-radius: 50%;
                 position: absolute;
-                left: 0.5rem;
-                bottom: 0.5rem;
+                left: 1rem;
+                bottom: 1rem;
                 background-color: var(--bg-color);
-                padding: 0.8rem;
+                padding: 0.4rem;
               }
 
               .open_member_popup {
                 position: absolute;
-                bottom: 0.5rem;
-                right: 0.5rem;
+                bottom: 1rem;
+                right: 0.7rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 1.8rem;
-                height: 1.8rem;
+                width: 1.5rem;
+                height: 1.5rem;
                 background-color: var(--dark-blue);
                 color: var(--bg-color);
                 border-radius: 50%;
                 cursor: pointer;
 
                 svg {
-                  width: 1rem;
+                  width: 0.7rem;
                 }
               }
             }
