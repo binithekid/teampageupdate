@@ -70,8 +70,9 @@
         cursor: pointer;
 
         svg {
-          margin-left: 0.5rem;
-          width: 1rem;
+          margin-left: 0.1rem;
+          width: 0.5rem;
+          transform: rotate(90deg);
         }
       }
     }
