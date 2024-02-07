@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../../Styles/modules/News/index.module.scss";
+import styles from "../../Styles/modules/News/post.module.scss";
+
 import PostCard from "../../Components/News/PostCard";
 import { client } from "../../utils/client";
 

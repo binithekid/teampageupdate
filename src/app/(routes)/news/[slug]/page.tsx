@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import styles from "../../../Styles/modules/News/post.module.scss";
 import { client } from "../../../utils/client";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
@@ -17,28 +19,32 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export const getPostContent = async ({ params }: any) => {
-  const response = await client.getEntries({
-    content_type: "post",
-    "fields.slug": params?.slug,
-  });
+export default function Post({ params }: any) {
+  const [content, setContent] = useState<any>(null);
 
-  const postData = await response?.items?.[0];
+  useEffect(() => {
+    const getPostContent = async () => {
+      const response = await client.getEntries({
+        content_type: "post",
+        "fields.slug": params?.slug,
+      });
 
-  if (!response?.items?.length) {
-    return {
-      redirect: {
-        destination: "/news",
-        permanent: false,
-      },
+      const postData = await response?.items?.[0];
+
+      if (!response?.items?.length) {
+        return {
+          redirect: {
+            destination: "/news",
+            permanent: false,
+          },
+        };
+      }
+
+      setContent(postData);
     };
-  }
 
-  return postData;
-};
-
-export default async function Post({ params }: any) {
-  const content = await getPostContent(params);
+    getPostContent();
+  }, []);
 
   const options: any = {
     renderNode: {
@@ -159,8 +165,8 @@ export default async function Post({ params }: any) {
   return (
     <>
       <Head>
-        <title>{`${content.fields.title} | Aim Hire`}</title>
-        <meta name="description" content={content.fields.excerpt} />
+        <title>{`${content?.fields.title} | Aim Hire`}</title>
+        <meta name="description" content={content?.fields.excerpt} />
       </Head>
 
       <main className={styles.post}>
@@ -168,14 +174,14 @@ export default async function Post({ params }: any) {
           <div>
             <p className={styles.smallTitle}>Digital Gravity Press Release</p>
             <p className={styles.smallTitle}>
-              London, United Kingdom, {formatDate(content.fields.date)}
+              London, United Kingdom, {formatDate(content?.fields?.date)}
             </p>
             <p className={styles.smallTitle}>
-              {content.fields.author.fields.name},{" "}
-              {content.fields.author.fields.position}:{" "}
+              {content?.fields.author.fields.name},{" "}
+              {content?.fields.author.fields.position}:{" "}
               <a className={styles.emailLink}>
                 {" "}
-                {content.fields.author.fields.email}:{" "}
+                {content?.fields.author.fields.email}:{" "}
               </a>
             </p>
           </div>
@@ -195,12 +201,12 @@ export default async function Post({ params }: any) {
           </div>
         </div>
         <div className={styles.postContent}>
-          <h1 className={styles.postTitle}>{content.fields.title} </h1>
-          {documentToReactComponents(content.fields.excerpt, excerpt)}
+          <h1 className={styles.postTitle}>{content?.fields.title} </h1>
+          {documentToReactComponents(content?.fields.excerpt, excerpt)}
 
           <hr />
 
-          {documentToReactComponents(content.fields.content, options)}
+          {documentToReactComponents(content?.fields.content, options)}
         </div>
       </main>
     </>
