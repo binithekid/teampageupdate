@@ -11,121 +11,6 @@ import AlexImg from "../app/assets/AN.png";
 import SusannaImg from "../app/assets/SK.png";
 import KevinImg from "../app/assets/KO.png";
 
-// export const teamMembersData = [
-//   {
-//     name: "Thor Johnsen",
-//     position: "Managing Partner",
-//     summary: `Fund Manager, Digital 9 Infra Plc Fund Manager, Arcapita 2.8x Realised Gross MOIC ($2bn Returned) `,
-//     img: ThorImg,
-//     linkedinUrl: "https://www.linkedin.com/in/58753/",
-//     content: [
-//       `Thor is the founding partner of Digital Gravity Infrastructure Partners (DGP) and leads all investment committee activity. Thor has over 18 years’ experience in infrastructure investment and has been the Fund Manager of two leading European infrastructure portfolios.`,
-//       `Thor has invested ~$5.3 billion of equity and has a realised track record of ~2.8x gross MOIC, returning over $2 billion to investors.  Prior to DGP Thor managed Digital 9 Infrastructure (DGI9), which has a market capitalisation of over $1 billion and ~$252 million in EBITDA.`,
-//       `Thor oversaw all investment decisions at DGI9 which returned 23.1% to investors on an annualised basis in 2021. Prior to DGP and DGI9, Thor was Head of Infrastructure for Arcapita. Arcapita held a prominent infrastructure portfolio across renewable energy, industrials, and utilities. Thor had responsibilities across all transaction aspects, including financing, M&A and post-acquisition investment planning.  In 2008 Mr. Johnsen led the $320 million acquisition of the leading UK rail-freight business, Freightliner plc and later sold the business in 2015 for over $1 billion.`,
-//       `Thor has also held senior investment banking roles at Bank of America Merrill Lynch focused on Infrastructure and Energy Technology M&A, working across the New York and London office leading a focus on sustainability and renewables which has since helped define DGP’s portfolio digital energy strategy. Thor began his career at Credit Suisse working in utilities M&A.`,
-//       `Thor was in the U.S. Navy, serving as a Lieutenant Commander in U.S. Naval reserves (inactive). He  holds a J.D. from Georgetown Law, an MBA from Georgetown (with a semester at University of Melbourne) and a BA in Economics from Northwestern (with honours). While at Northwestern, Thor spent a semester in Beijing at Peking University where he studied Chinese.`,
-//       ``,
-//     ],
-//   },
-//   {
-//     name: "Andre Karihaloo",
-//     position: "Partner",
-//     summary: `Snr. Director, Digital 9 Infra Plc HSBC, Investment Management Built $261m EBITDA portfolio`,
-//     img: AndreImg,
-//     linkedinUrl: "https://www.linkedin.com/in/andrekarihaloo/",
-//     content: [
-//       `Andre is a founding partner in Digital Gravity Infrastructure Partners and is focused on investment origination. Andre and Thor Johnsen have worked together since 2019 on the investment strategy behind Digital Gravity, and was instrumental in establishing DGP’s predecessor Fund, Digital 9 Infrastructure (DGI9), which has a market capitalisation of over $1 billion and ~$252 million in EBITDA.`,
-//       `Alongside Thor, he raised over $1 billion from large institutions, ranking first amongst investment trusts for fund raising in 2021. Importantly, Andre helped establish and drive DGI9’s innovative Nordic data centre strategy, splitting and migrating towards areas of abundant renewable energy. This strategy led to a 67% increase in run-rate EBITDA of DGI9’s core data centre platform in less than 12 months. While at DGI9, Andre also served on the Boards of Volta, Ficolo, Verne and as a Board Observer of Aqua Comms.`,
-//       `Before DGI9, Andre held numerous senior roles across infrastructure investment, focused primarily on renewable and regeneration projects. Most notably, he was responsible for the investment strategy behind the £25 billion Severn Barrage project which aimed to provide the U.K. with 7% of its energy needs at power costs one fifth of the European average at the time. For a number of years, Mr. Karihaloo led conversations with the U.K. Prime Minister, Department of Energy, Members of Parliament and several Select Committees on regeneration and renewable energy infrastructure.`,
-//       `Andre has over 15 years’ experience in investment management, infrastructure and corporate finance, He started his career at HSBC’s global asset management business across both the London and New York offices. He holds an MSc in Finance and Economics from the London School of Economics. Originally from Australia, Andre represented Denmark at the under 20’s Rugby World Cup and is a qualified rugby coach, volunteering to coach junior players in London.  He speaks Danish and German.`,
-//     ],
-//   },
-//   {
-//     name: "Marco Vetrone",
-//     position: "CFO & COO",
-//     summary: `Managing Director & COO, CPP Led CPP Ops from >$125bn to >$430bn (3) CPA/CA and CFA Designations`,
-//     img: MarcoImg,
-//     linkedinUrl: "https://www.linkedin.com/in/marcovetrone/",
-//     content: [
-//       `Marco is the CFO & COO of Digital Gravity Infrastructure Partners and will run the financial playbook of the organisation, helping to drive financial and operational excellence and support strategic decisions as it scales. Marco will serve as a thought partner across the various functional aspects of the firm, while implementing the systems, controls, and processes to help the organisation grow to the next stage.`,
-//       `Prior to joining Digital Gravity Infra Partners, Marco spent over 13 years at CPP Investments (CPPIB), most recently as Managing Director, Partnership Development and Operations and helped lead the efforts of the firm’s International Department, overseeing the regional operations of CPP Investments in Europe, and heading up strategic partnerships across EMEA. Marco helped the firm expand its geographic footprint and global infrastructure as the firm grew into one of the largest institutional investors in the world. Marco also held leadership roles in Valuations, Operational Due Diligence, and Funding.`,
-//       `Prior to joining CPPIB, Marco spent 5 years in banking, and 5 years in audit. Marco is a Canadian Chartered Accountant (CPA, CA), a Chartered Financial Analyst Charterholder (CFA), and holds an MBA from London Business School.`,
-//       `Marco is a Trustee for Youth Experience in Sport (YES), a charity that provides support to sports clubs, youth centres, and sports charities in East London.`,
-//     ],
-//   },
-//   {
-//     name: "Charlotte Johnsen",
-//     position: "General Counsel",
-//     summary: `Counsel Linklaters, 15+ Years Corporate M&A and Financial Regulation`,
-//     img: CharlotteImg,
-//     linkedinUrl: "https://www.linkedin.com/in/charlotte-johnsen-031085aa/",
-//     content: [
-//       `Charlotte is General Counsel of Digital Gravity Infrastructure Partners and will play a critical role in providing legal guidance and oversight at the firm. Charlotte will be responsible for managing all legal matters related to the firm’s operations, investments, and compliance obligations and advise the leadership team on corporate governance matters and investment activity.`,
-//       `Charlotte is an English law certified solicitor who qualified in 2008 after her training with Magic Circle firm Linklaters LLP, where she worked for 15 years. Charlotte has a dual practice specialism of corporate transactions and advisory work together with financial services regulation. She is experienced at leading and motivation teams, solving complex legal issues and strong drafting abilities. Outside of law, Charlotte volunteers in the education sector as a school governor and charity trustee.`,
-//       `Charlotte holds a BA in History from University College London (2:1); Graduate Diploma in Law from BPP Law School (commendation); and received a distinction in the Legal Practice Course from BPP Law School.`,
-//     ],
-//   },
-//   {
-//     name: "Jack McWhinnie",
-//     position: "Vice President",
-//     summary: `Associate, Digital 9 Infra Plc Analyst, Digital Alpha ($2.5bn AUM) 4-Years & $2bn+ Digital Infra Transactions`,
-//     img: JackImg,
-//     linkedinUrl: "https://www.linkedin.com/in/jackmcwhinnie/",
-//     content: [
-//       `Jack has spent the last 5-years focussed solely on digital infrastructure investment with expertise across the entire investment process including due diligence, transaction execution and portfolio management.`,
-//       `Jack joined Thor and Andre from DGP’s predecessor Fund, DGI9, where he helped lead the ~$1.7 billion acquisition of Arqiva, the sole operator of digital terrestrial television and radio infrastructure in the United Kingdom. Before joining DGI9, Jack worked for Digital Alpha, a San-Francisco based Fund where he worked closely with the firm’s $200m majority investment in DTiQ to extend their IoT capabilities with Cisco Meraki. Jack also served as Board Observer for UKCloud. Before Digital Alpha, Jack spent some time with Hanover Investors, a special situations public and private equity investor where he helped work on a UK listed biopharmaceutical take private.`,
-//       `Jack holds a First Class Honours in Management with Finance from Warwick University and competed at one of the worlds best known regattas, Henley Royal Regatta.`,
-//     ],
-//   },
-//   {
-//     name: "Elaine Bucknor",
-//     position: "Operating Partner",
-//     summary: `Group CTO, Sky 25+ years in Tech Cyber Security Industry Expert`,
-//     img: ElaineImg,
-//     linkedinUrl: "https://www.linkedin.com/in/elaine-bucknor/",
-//     content: [
-//       `Former Group Chief Information Security Officer, Sky`,
-//       `Elaine Bucknor is a highly accomplished Non-Executive Director, technology executive, and leader who has tremendous experience in shaping and executing technology strategies to support organisational transformation and growth.`,
-//       `Elaine has over 25 years of experience in the technology industry. Her last executive role was at Sky, one of Europe’s leading broadcasting and media companies and one of the UK’s largest telecommunications and mobile businesses, where she worked for over ten years and was an integral part of its senior leadership team, with overall responsibility for the Sky group’s technology strategy. Elaine was Group Chief Information Security Officer at Sky and prior to that, Group Director - Strategy, Security and Governance within Sky's Technology division, and a member of its Executive Leadership Team. In her role, Elaine was responsible for the overall strategic direction and governance for Group Technology at Sky, ensuring the development and delivery of its large-scale international technology programmes across broadcast and digital platforms, network infrastructure and IT. Elaine also had overall responsibility for Cyber Security at Sky, covering all aspects of security, governance, risk and compliance.`,
-//       `With over 20 years in operational and strategic technology consultancy roles, Elaine brings tremendous technical leadership and operational expertise to the firm. She has worked across numerous sectors from defence to financial services and, for the last few years, media and telecommunications. Beginning her career writing code and designing and architecting technology platforms and systems, Elaine moved onto consulting in business change and technology, directing and delivering major programmes of work before joining Sky's senior leadership team. Elaine was part of Sky's 'Women in Leadership' group, an initiative to get more women into the most senior leadership positions at Sky. She was also a key sponsor in Sky's drive to get more women into technology.`,
-//       `Before Sky, Elaine held operational and consultancy roles with multinational market leaders in the Telecommunications, Media, Technology, Travel, Utilities, and Financial sectors, including at ITV, the BBC, and AOL/Carphone Warehouse, where she advised at Board, executive and leadership level on technology capabilities for growth, efficiency, and resilience in highly disrupted markets.`,
-//       `Elaine serves as Non-Executive Director of Darktrace, a global leader in cyber security artificial intelligence, a Non-Executive Director of AIM-listed conveyancing software company, Smoove plc, and Notting Hill Genesis group, one of the UK’s largest housing associations.`,
-//     ],
-//   },
-//   {
-//     name: "Tami Erwin",
-//     position: "Operating Partner",
-//     summary: `EVP & CEO, Verizon 35+ years in Telecoms Led Strategic Overhaul of  $31B+ Business`,
-//     img: TamiImg,
-//     linkedinUrl: "https://www.linkedin.com/in/tamierwin/",
-//     content: [
-//       `Tami Erwin is a veteran CEO, Fortune 500 director, and expert on digital transformation and growth. A longtime counselor to CEOs and corporate boards, Tami has deep experience scaling innovation and driving transformation across large and complex organizations. She has advised CEOs in every industry and worked with virtually all Fortune 500 companies as well as governments, communities, and consumers around the world. A trusted advisor who understands the challenges of international markets and managing global risk, Tami provides exceptional value to corporate boards focused on long-term shareholder value.`,
-//       `As EVP and CEO of Verizon Business, Tami led more than 26,000 employees in 60 countries. Over three and a half years, she scaled an organization that delivered significant gains in profitability and revenue ($31+ billion in 2022) and advanced Verizon's leadership in 5G technology. Tami also built a culture known for high performance, inclusivity, and belonging.`,
-//       `Before she took the helm at Verizon Business in 2019, Tami served as EVP and Chief Operating Officer of Verizon. In that role, she directed the expansion of the company’s wireless business and Verizon Fios, which is now America's largest residential and commercial fiber network. Tami’s innovative service enhancements drew acclaim across the industry and proved critical to accelerating Verizon’s worldwide growth in customers, revenue, and profitability.`,
-//       `Highly strategic and customer-focused, Tami advanced quickly over her 35-year career to senior roles in all parts of Verizon: She led global sales and service for the company’s core businesses, headed national operations, and served as Chief Marketing Officer of Verizon Wireless and as President of the business’s West region. In the latter role, she led a major turnaround and lifted Verizon Wireless from fourth place to first place in 12 western states.`,
-//       `Tami played a key role in elevating Verizon’s reputation as a socially responsible company and champion of equity, inclusion, and accessibility for all. Women of Wireless and Women of the World, leadership training programs that she launched, helped to drive increases in female leadership across the company. Tami was the Executive Sponsor of Verizon’s Veterans ERG (employee resource group), which provides programs and resources to more than 10,0000 veterans, active Reservists, National Guard, and military families.`,
-//       `Tami’s passion for deploying technology to enhance the way people connect and communicate goes back to her youth. The daughter of a doctor and a nurse, Tami started out pre-med at Pacific Union College but found a calling as a customer service representative for US West, which became part of Verizon. While at Verizon, she completed the Executive Program at the Stanford Graduate School of Business.`,
-//       `Tami is on the boards of John Deere (NYSE: DE) and York Space Systems. She is a member of the advisory council of Dublin-based Aptiv (NYSE: APTV), a Senior Fellow of Mission Possible Partnership, and a Champion in JOURNEY, a nonprofit that works to advance diversity at the top of the private sector.`,
-//       `Tami and her husband, Darrell, live in Colorado. They have two adult children.`,
-//     ],
-//   },
-//   {
-//     name: "Neil McRae",
-//     position: "Operating Partner",
-//     summary: `Group Chief Architecture, BT Designed & Built Colt’s Network Global Recognition for Network Design`,
-//     img: NeilImg,
-//     linkedinUrl: "https://www.linkedin.com/in/neilmcrae/",
-//     content: [
-//       `Neil is a thirty-year technology veteran, spending the last twelve years leading BT’s Technology, Network and Digital strategy. Neil drove a significant transformation at BT, including leading the technology due diligence and subsequent integration workstream of BT’s £12B acquisition of EE. Neil went on to lead BT’s strategy for a £15B infrastructure investment in FTTP deployment and led BT’s 5G launch and overall wireless strategy. Neil also created a multi-billion-pound strategy to transform BT’s IT and Digital platforms.`,
-//       `Neil is a recognised leader in network, cloud and digital infrastructure and technology and, in 2022, received the ITP’s outstanding contribution to the telecommunications industry award.`,
-//       `Neil has advised many technology companies and most recently was an advisor to Lumenisity, a fibre technology spin-out of Southampton University that was sold to Microsoft Corporation in 2022.`,
-//       `Before BT, Neil held senior Technology positions at Cable & Wireless/Vodafone, COLT, and Easynet and in 1992, was a founding member of Demon Internet, the first consumer ISP in the UK. Neil has also worked with the London Internet Exchange as an elected director for more than twenty years.`,
-//       `Neil is a fundraiser for autism charities and has raised over £35,000 through various events.`,
-//       `Neil has a diploma in Leadership and Management from MIT/Sloan School of Management.`,
-//     ],
-//   },
-// ];
-
 export const teamMembersData = [
   {
     name: "Thor Johnsen",
@@ -177,7 +62,8 @@ export const teamMembersData = [
   {
     name: "Laura Fernandez",
     position: "Head of Sustainable Connectivity & ESG",
-    summary: "summary goes here",
+    summary:
+      "Cornerstone, Board Member, Head of Strategic Planning, Telefonica, 20+ Years TMT Ops & Strategy",
     linkedinUrl: "https://www.linkedin.com/in/fernandez-laura/",
     img: LauraImg,
     content: [
@@ -223,7 +109,8 @@ export const teamMembersData = [
   {
     name: "Alex Norton",
     position: "Associate",
-    summary: "summary goes here",
+    summary:
+      "Digital Infrastructure, Torch Partners, Associate, Qbera Capital LLP, 4+ Years Digital Infra M&A Banking",
     linkedinUrl: "https://www.linkedin.com/in/alexenorton/",
     img: AlexImg,
     content: [
@@ -271,7 +158,8 @@ export const teamMembersData = [
   {
     name: "Susanna Kass",
     position: "Operating Partner",
-    summary: "summary goes here",
+    summary:
+      "Data Centre Advisor, UN SDG Energy Fellow, Stanford University, 32+ years of Clean Energy Strategy",
     linkedinUrl: "https://www.linkedin.com/in/susanna-kass-6753768/",
     img: SusannaImg,
     content: [
@@ -307,7 +195,8 @@ export const teamMembersData = [
   {
     name: "Kevin O’Hara",
     position: "Operating Partner",
-    summary: "summary goes here",
+    summary:
+      "Founder & Chairman, Congruex CEO, Integra Telecom, 30+ years in Telecoms, Co-Founder & COO, Level 3",
     linkedinUrl: "https://www.linkedin.com/in/kevinjamesohara/",
     img: KevinImg,
     content: [

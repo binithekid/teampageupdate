@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.19.4",
     "@johanaarstein/dotlottie-player": "^1.5.14",
     "@studio-freight/lenis": "^1.0.16",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
+    "contentful": "^10.6.21",
     "gsap": "^3.11.4",
     "next": "13.4.8",
     "react": "18.2.0",
