@@ -160,10 +160,11 @@
           .date_cat {
             width: 33%;
             display: block;
-            font-size: 0.48rem;
+            font-size: 0.45rem;
             font-weight: 300;
             color: #484848;
             white-space: nowrap;
+            text-transform: uppercase;
 
             @media (max-width: 768px) {
               .date_cat {

@@ -7,7 +7,6 @@ import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import Link from "next/link";
 import Head from "next/head";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Loading from "../../../Components/Loading/Loading";
 
 export async function generateStaticParams() {
   const response = await client.getEntries({ content_type: "post" });
@@ -37,8 +36,12 @@ export default function Post({ params }: any) {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Fetch content
         const fetchedContent = await getContent(params);
         setContent(fetchedContent);
+
+        // Scroll to the top of the page
+        window.scrollTo(0, 0);
       } catch (error) {
         console.error("Error fetching content:", error);
       }
@@ -46,8 +49,6 @@ export default function Post({ params }: any) {
 
     fetchData();
   }, []);
-
-  console.log(content);
 
   const options: any = {
     renderNode: {

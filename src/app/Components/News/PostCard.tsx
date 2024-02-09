@@ -90,19 +90,22 @@ const PostCard = ({ post }: any) => {
   };
 
   return (
-    <Link key={date} href={`/news/${slug}`} onClick={postClick}>
-      <div className={styles.news_row} ref={postRef}>
-        <div className={styles.image_container}>
-          <img
-            src={`https:${coverImage.fields.file.url}`}
-            alt={`Cover Image for ${title}`}
-          />
-        </div>
-        <div className={styles.info_container}>
-          <h2>{title}</h2>
-          <p>{excerpt}</p>
-          <span className={styles.date_cat}>{formatDate(date)}</span>
-        </div>
+    <Link
+      className={styles.news_row}
+      key={date}
+      href={`/news/${slug}`}
+      onClick={postClick}
+    >
+      <div className={styles.image_container}>
+        <img
+          src={`https:${coverImage.fields.file.url}`}
+          alt={`Cover Image for ${title}`}
+        />
+      </div>
+      <div className={styles.info_container}>
+        <h2>{title}</h2>
+        <p>{excerpt}</p>
+        <span className={styles.date_cat}>{formatDate(date)}</span>
       </div>
     </Link>
   );
