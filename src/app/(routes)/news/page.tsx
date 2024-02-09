@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import styles from "../../Styles/modules/News/post.module.scss";
-
 import PostCard from "../../Components/News/PostCard";
 import { client } from "../../utils/client";
 
@@ -36,17 +35,6 @@ export default async function News() {
         <h1>News</h1>
 
         <div className={styles.news_wrapper}>
-          <nav className={styles.news_categories}>
-            {allCategories.map((category) => (
-              <button
-                className={category === activeCategory ? styles.active_cat : ""}
-                onClick={() => filterPosts(category)}
-                key={category}
-              >
-                {category}
-              </button>
-            ))}
-          </nav>
           {filteredPosts.map((post: any, index: number) => (
             <PostCard post={post} key={index} />
           ))}

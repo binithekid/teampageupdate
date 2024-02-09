@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "../../../Styles/modules/News/post.module.scss";
 import { client } from "../../../utils/client";
-import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import Link from "next/link";
 import Head from "next/head";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -19,32 +19,19 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export default function Post({ params }: any) {
-  const [content, setContent] = useState<any>(null);
+export const getContent = async ({ params }: any) => {
+  const response = await client.getEntries({
+    content_type: "post",
+    "fields.slug": params?.slug,
+  });
 
-  useEffect(() => {
-    const getPostContent = async () => {
-      const response = await client.getEntries({
-        content_type: "post",
-        "fields.slug": params?.slug,
-      });
+  const content = await response?.items?.[0];
 
-      const postData = await response?.items?.[0];
+  return content;
+};
 
-      if (!response?.items?.length) {
-        return {
-          redirect: {
-            destination: "/news",
-            permanent: false,
-          },
-        };
-      }
-
-      setContent(postData);
-    };
-
-    getPostContent();
-  }, []);
+export default async function Post({ params }: any) {
+  const content = await getContent(params);
 
   const options: any = {
     renderNode: {
@@ -100,14 +87,6 @@ export default function Post({ params }: any) {
             alt={node.data.target.fields.title}
           />
         );
-      },
-    },
-  };
-
-  const excerpt: any = {
-    renderNode: {
-      [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
-        return <p className={styles.subTitle}>{children}</p>;
       },
     },
   };
@@ -202,7 +181,7 @@ export default function Post({ params }: any) {
         </div>
         <div className={styles.postContent}>
           <h1 className={styles.postTitle}>{content?.fields.title} </h1>
-          {documentToReactComponents(content?.fields.excerpt, excerpt)}
+          <p className={styles.subTitle}>{content?.fields.excerpt}</p>
 
           <hr />
 
