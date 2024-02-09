@@ -15,7 +15,6 @@ import useSmoothScroll from "../Hooks/useSmoothScroll";
 import { Footer } from "./Footer";
 import { Acceptance } from "./Acceptance";
 import { usePathname } from "next/navigation";
-// import { usePathname } from 'next/navigation';
 
 gsap.registerPlugin(ScrollTrigger);
 
