@@ -137,7 +137,7 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
       <FixedTopLinks />
       <Header />
       <Acceptance />
-      {/* <Loading /> */}
+      <Loading />
       <div>{children}</div>
       <Footer />
     </>

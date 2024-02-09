@@ -3,6 +3,7 @@ import styles from "../../Styles/modules/News/post.module.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import { usePageTransition } from "../PageTransition";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,6 +11,8 @@ const PostCard = ({ post }: any) => {
   const { title, slug, date, coverImage, excerpt } = post.fields;
 
   const postRef = useRef(null);
+
+  const { onLinkClick } = usePageTransition();
 
   function formatDate(inputDate: any) {
     const date = new Date(inputDate);
@@ -81,12 +84,18 @@ const PostCard = ({ post }: any) => {
     }
   }, [postRef]);
 
+  const postClick = (e: any) => {
+    e.preventDefault();
+    onLinkClick(e, `/news/${slug}`);
+  };
+
   return (
     <Link
       ref={postRef}
       className={styles.news_row}
       key={date}
       href={`/news/${slug}`}
+      onClick={postClick}
     >
       <div className={styles.image_container}>
         <img
