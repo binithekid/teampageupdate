@@ -64,25 +64,25 @@ const PostCard = ({ post }: any) => {
     }
   }
 
-  useEffect(() => {
-    const postElement = postRef.current;
+  // useEffect(() => {
+  //   const postElement = postRef.current;
 
-    if (postElement) {
-      const fadeInAnimation = gsap.fromTo(
-        postElement,
-        { opacity: 0 },
-        { opacity: 1, duration: 1 }
-      );
+  //   if (postElement) {
+  //     const fadeInAnimation = gsap.fromTo(
+  //       postElement,
+  //       { opacity: 0 },
+  //       { opacity: 1, duration: 1 }
+  //     );
 
-      // Use ScrollTrigger to trigger animation when element comes into view
-      ScrollTrigger.create({
-        trigger: postElement,
-        start: "top 80%", // Start animation when the top of the element is 80% into the viewport
-        animation: fadeInAnimation,
-        once: true, // Only trigger animation once
-      });
-    }
-  }, [postRef]);
+  //     // Use ScrollTrigger to trigger animation when element comes into view
+  //     ScrollTrigger.create({
+  //       trigger: postElement,
+  //       start: "top 80%", // Start animation when the top of the element is 80% into the viewport
+  //       animation: fadeInAnimation,
+  //       once: true, // Only trigger animation once
+  //     });
+  //   }
+  // }, [postRef]);
 
   const postClick = (e: any) => {
     e.preventDefault();
@@ -90,23 +90,19 @@ const PostCard = ({ post }: any) => {
   };
 
   return (
-    <Link
-      ref={postRef}
-      className={styles.news_row}
-      key={date}
-      href={`/news/${slug}`}
-      onClick={postClick}
-    >
-      <div className={styles.image_container}>
-        <img
-          src={`https:${coverImage.fields.file.url}`}
-          alt={`Cover Image for ${title}`}
-        />
-      </div>
-      <div className={styles.info_container}>
-        <h2>{title}</h2>
-        <p>{excerpt}</p>
-        <span className={styles.date_cat}>{formatDate(date)}</span>
+    <Link key={date} href={`/news/${slug}`} onClick={postClick}>
+      <div className={styles.news_row} ref={postRef}>
+        <div className={styles.image_container}>
+          <img
+            src={`https:${coverImage.fields.file.url}`}
+            alt={`Cover Image for ${title}`}
+          />
+        </div>
+        <div className={styles.info_container}>
+          <h2>{title}</h2>
+          <p>{excerpt}</p>
+          <span className={styles.date_cat}>{formatDate(date)}</span>
+        </div>
       </div>
     </Link>
   );
