@@ -1,33 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../../Styles/modules/News/post.module.scss";
 import PostCard from "../../Components/News/PostCard";
 import { client } from "../../utils/client";
 
-const allCategories = ["All", "Firm", "Portfolio", "People"];
+export default function News() {
+  async function getPosts() {
+    const response = await client.getEntries({ content_type: "post" });
+    const posts = await response.items;
 
-async function getPosts() {
-  const response = await client.getEntries({ content_type: "post" });
-  const posts = await response.items;
+    return posts;
+  }
 
-  return posts;
-}
+  const [posts, setPosts] = useState([]);
 
-export default async function News() {
-  const [activeCategory, setActiveCategory] = useState(allCategories[0]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchedPosts = await getPosts();
+        setPosts(fetchedPosts);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
+    };
 
-  const filterPosts = (category: any) => {
-    console.log("category", category);
-    setActiveCategory(category);
-  };
-
-  const posts = await getPosts();
-
-  const filteredPosts =
-    activeCategory === "All"
-      ? posts
-      : posts.filter((post: any) => post.category === activeCategory);
+    fetchData();
+  }, []);
 
   return (
     <main className={styles.news_page}>
@@ -35,7 +34,7 @@ export default async function News() {
         <h1>News</h1>
 
         <div className={styles.news_wrapper}>
-          {filteredPosts.map((post: any, index: number) => (
+          {posts?.map((post: any, index: number) => (
             <PostCard post={post} key={index} />
           ))}
         </div>

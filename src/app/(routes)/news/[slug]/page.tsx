@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../Styles/modules/News/post.module.scss";
 import { client } from "../../../utils/client";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
@@ -31,7 +31,20 @@ export default async function Post({ params }: any) {
     return content;
   };
 
-  const content = await getContent(params);
+  const [content, setContent] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchedContent = await getContent(params);
+        setContent(fetchedContent);
+      } catch (error) {
+        console.error("Error fetching content:", error);
+      }
+    };
+
+    fetchData();
+  }, [params]);
 
   const options: any = {
     renderNode: {
