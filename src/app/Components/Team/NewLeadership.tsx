@@ -626,7 +626,7 @@ const PopupModule = ({
 interface MemberCardProps {
   idx: number;
   name: string;
-  summary: string;
+  summary: any;
   position: string;
   img: StaticImageData;
   linkedinUrl: string;
