@@ -23,13 +23,12 @@
       padding: 0 15%;
       z-index: 10;
       display: flex;
-  
+
       h1 {
         font-size: 2rem;
         font-weight: 500;
         line-height: 1;
       }
-  
     }
 
     .about_section {
@@ -44,7 +43,7 @@
       align-items: center;
       margin-bottom: 0;
       position: relative;
-    
+
       .about_section_heading_wrapper {
         display: flex;
         flex-direction: column;
@@ -53,7 +52,7 @@
         width: 85%;
         height: 50svh;
         opacity: 0;
-    
+
         h2 {
           width: 100%;
           font-size: 1.3rem;
@@ -63,7 +62,7 @@
           will-change: transform;
           text-align: center;
           margin-bottom: 0.8rem;
-    
+
           span {
             display: block;
             font-weight: 400;
@@ -73,14 +72,13 @@
             line-height: 1;
             will-change: transform;
           }
-    
         }
-    
+
         .content_wrapper {
           width: 90%;
           position: relative;
           height: auto;
-    
+
           p {
             display: block;
             font-size: 0.53rem;
@@ -97,30 +95,50 @@
             // left: 0;
             // right: 0;
           }
-
         }
 
-        a {
+        .button_container {
           display: flex;
-          position: relative;
-          border-radius: 2rem;
-          padding: 0.35rem 0.7rem;
-          font-size: 0.5rem;
-          font-weight: 500;
-          background-color: transparent;
-          border: 0.03rem solid var(--light-sec-color);
-          font-weight: 400;
-          transition: all 0.3s ease;
+          flex-direction: row;
+          gap: 0.5rem;
+          a {
+            display: flex;
+            position: relative;
+            border-radius: 2rem;
+            padding: 0.35rem 0.7rem;
+            font-size: 0.5rem;
+            font-weight: 500;
+            background-color: transparent;
+            border: 0.03rem solid var(--light-sec-color);
+            font-weight: 400;
+            transition: all 0.3s ease;
 
-          &:hover {
-            background-color: var(--primary-color);
-            color: var(--bg-color);
+            &:hover {
+              background-color: var(--primary-color);
+              color: var(--bg-color);
+            }
+          }
+
+          .scroll_down {
+            display: flex;
+            position: relative;
+            border-radius: 2rem;
+            padding: 0.35rem 0.7rem;
+            font-size: 0.5rem;
+            font-weight: 500;
+            background-color: lightgray;
+            border: 0.03rem solid var(--light-sec-color);
+            font-weight: 400;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: var(--primary-color);
+              color: var(--bg-color);
+            }
           }
         }
-
       }
     }
-
   }
 
   .lottie_scene_wrapper {
@@ -138,33 +156,26 @@
     padding: 7% 8% 6%;
 
     .lottie_element {
-
       &::before {
         content: "";
         position: absolute;
         inset: 0;
-        background-color: rgba(0,0,0,0.1);
+        background-color: rgba(0, 0, 0, 0.1);
       }
     }
-
   }
-
 }
 
-@media ( max-width: 900px ) {
+@media (max-width: 900px) {
   .hero_section {
-  
     .hero_sticky_wrapper {
-
       header {
-    
         h1 {
           font-size: 1.9rem;
         }
       }
 
       .about_section {
-      
         .about_section_heading_wrapper {
           // width: 85%;
           // height: 40svh;
@@ -173,11 +184,9 @@
     }
   }
 }
-@media ( max-width: 768px ) {
+@media (max-width: 768px) {
   .hero_section {
-  
     .hero_sticky_wrapper {
-
       header {
         display: flex;
         flex-direction: column;
@@ -189,7 +198,6 @@
       }
 
       .about_section {
-      
         .about_section_heading_wrapper {
           // width: 85%;
           // height: 50svh;
@@ -212,20 +220,20 @@
   }
 }
 
-@media ( max-width: 600px ) {
+@media (max-width: 600px) {
   .hero_section {
     margin-bottom: 2rem;
-    
+
     .hero_sticky_wrapper {
       top: 0;
       height: 100svh;
-  
+
       header {
         top: 0;
         height: 100svh;
         display: flex;
         flex-direction: column;
-    
+
         h1 {
           font-size: 1.8rem;
           // font-weight: 500;
@@ -234,68 +242,56 @@
       }
 
       .about_section {
-      
         .about_section_heading_wrapper {
           width: 100%;
           // height: 60svh;
           opacity: 0;
-      
+
           h2 {
             width: 100%;
             font-size: 1.1rem;
             line-height: 1.1;
             margin-bottom: 0.75rem;
-      
+
             span {
               font-size: 0.7rem;
               margin-bottom: 0.3rem;
             }
-      
           }
-      
+
           .content_wrapper {
             width: 95%;
             // height: 25%;
-      
+
             p {
               font-size: 0.58rem;
               font-weight: 500;
               line-height: 1.35;
             }
-  
           }
-  
         }
       }
     }
-
   }
 }
 
-@media ( max-width: 380px ) {
+@media (max-width: 380px) {
   .hero_section {
-  
     .hero_sticky_wrapper {
-
       .about_section {
-      
         .about_section_heading_wrapper {
-      
           .content_wrapper {
             // width: 95%;
             // height: 28%;
-      
+
             // p {
             //   font-size: 0.58rem;
             //   font-weight: 500;
             //   line-height: 1.35;
             // }
-  
           }
-  
         }
       }
     }
-
   }
 }

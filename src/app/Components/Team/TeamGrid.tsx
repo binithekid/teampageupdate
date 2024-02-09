@@ -111,7 +111,7 @@ const PopupModule = ({
 interface MemberCardProps {
   idx: number;
   name: string;
-  summary: string;
+  summary: any;
   position: string;
   img: StaticImageData;
   linkedinUrl: string;
@@ -218,7 +218,7 @@ const MemberCard = ({
             ref={cardContainerRef}
           >
             <div className={styles.card_content}>
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
                 height="38"
@@ -229,9 +229,12 @@ const MemberCard = ({
                   d="M0 34.7L9.5 37.6L20.5 2.8L11.4 0L0 34.7ZM18.9 34.7L28.4 37.6L39.4 2.8L30.3 0L18.9 34.7Z"
                   fill="var(--primary-color)"
                 />
-              </svg>
-
-              <p>{summary}</p>
+              </svg> */}
+              <p>
+                {summary?.map((content: string) => (
+                  <span key={content}>{content}</span>
+                ))}
+              </p>
             </div>
 
             <a

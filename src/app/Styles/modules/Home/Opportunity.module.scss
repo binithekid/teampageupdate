@@ -79,13 +79,13 @@
         position: absolute;
         inset: 0;
       }
-  
+
       .opportunity_contents_wrapper {
         width: 60%;
         height: 60%;
         position: relative;
         z-index: 10;
-  
+
         .content_box {
           position: absolute;
           left: 0;
@@ -95,9 +95,9 @@
           pointer-events: none;
           display: flex;
           flex-direction: column;
-  
+
           h5 {
-            font-size: 1.25rem;
+            font-size: 1rem;
             // position: absolute;
             // top: 0;
             // left: 0;
@@ -108,7 +108,7 @@
             line-height: 1.2;
             white-space: nowrap;
           }
-  
+
           ul {
             // position: absolute;
             // top: 50%;
@@ -119,11 +119,11 @@
             padding: 0;
             margin: 0;
             // transform: translateY(-50%);
-  
+
             li {
               // opacity: 0;
               width: 33.33%;
-  
+
               span {
                 background-color: var(--primary-color);
                 border-radius: 0.2rem;
@@ -135,7 +135,7 @@
                 margin-bottom: 0.5rem;
                 overflow: hidden;
                 gap: 0.3rem;
-  
+
                 svg {
                   display: block;
                   width: 100%;
@@ -144,8 +144,7 @@
                   color: var(--bg-color);
                 }
               }
-  
-  
+
               p {
                 font-size: 0.48rem;
                 color: inherit;
@@ -153,28 +152,27 @@
                 font-weight: 500;
               }
             }
-            
           }
         }
       }
-  
+
       .huge_heading {
         position: absolute;
         bottom: 1rem;
         left: 2.5rem;
-        width: 57%;
+        width: 85%;
         height: 20%;
         // color: var(--bg-color);
-  
+
         h5 {
           position: absolute;
           left: 0;
           bottom: 0;
-          font-size: 1.4rem;
+          font-size: 1rem;
           line-height: 1.2;
         }
       }
-  
+
       .opportunity_animation_scene {
         position: absolute;
         top: 0;
@@ -186,17 +184,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-  
+
         .lottie_container {
           position: absolute;
           inset: 0;
           opacity: 0;
           display: flex;
-  
+
           .lottie_scene_svg {
             color: #fff;
             fill: #fff;
-            
+
             svg {
               color: #fff;
               fill: #fff;
@@ -205,15 +203,15 @@
           }
         }
       }
-  
+
       .opportunity_navigation_container {
         position: absolute;
         right: 0.75rem;
         bottom: 0.75rem;
         display: flex;
         flex-direction: column;
-  
-        >span {
+
+        > span {
           position: relative;
           width: 0.2rem;
           height: 0.2rem;
@@ -225,11 +223,11 @@
           align-items: center;
           will-change: transform;
           cursor: pointer;
-  
+
           &:last-of-type {
             margin-bottom: 0;
           }
-          
+
           &::before {
             content: "";
             position: absolute;
@@ -241,30 +239,27 @@
             border-radius: 50%;
             border: 0.03rem solid var(--primary-color);
           }
-          
+
           span {
             position: absolute;
             width: 100%;
             height: 100%;
             border-radius: 50%;
             outline: none;
-            background: rgba(0,0,0,0);
+            background: rgba(0, 0, 0, 0);
             z-index: 10;
             will-change: transform;
-
           }
         }
       }
-
     }
-
   }
 }
 
 .m_oppurtonity_missions_section {
   padding: 0 5%;
 
-  >h5 {
+  > h5 {
     font-size: 1.7rem;
     font-weight: 500;
     line-height: 1.1;
@@ -292,7 +287,7 @@
 
       .m_content_wrapper {
         width: 100%;
-        
+
         h5 {
           font-size: 1.25rem;
           font-weight: 500;
@@ -332,7 +327,6 @@
               }
             }
 
-
             p {
               font-size: 0.48rem;
               color: inherit;
@@ -359,7 +353,7 @@
     }
   }
 
-  @media ( max-width: 380px ) {
+  @media (max-width: 380px) {
     .m_opportunity_slides_wrapper .m_opp_card {
       padding: 1rem 1rem;
 
@@ -373,7 +367,6 @@
           display: grid;
           gap: 0.1rem;
         }
-
       }
       .m_lottie_container {
         height: 22svh;
