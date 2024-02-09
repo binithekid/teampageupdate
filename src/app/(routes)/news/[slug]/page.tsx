@@ -34,6 +34,8 @@ export default function Post({ params }: any) {
   const [content, setContent] = useState<any>(null);
 
   useEffect(() => {
+    // window.scrollTo(0, 0);
+
     const fetchData = async () => {
       try {
         // Fetch content
@@ -41,7 +43,6 @@ export default function Post({ params }: any) {
         setContent(fetchedContent);
 
         // Scroll to the top of the page
-        window.scrollTo(0, 0);
       } catch (error) {
         console.error("Error fetching content:", error);
       }
@@ -165,7 +166,7 @@ export default function Post({ params }: any) {
         <meta name="description" content={content?.fields.excerpt} />
       </Head>
 
-      <main className={styles.post}>
+      <main className={`no-scroll ${styles.post}`}>
         <div className={styles.topSection}>
           <div>
             <p className={styles.smallTitle}>Digital Gravity Press Release</p>
