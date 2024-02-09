@@ -19,18 +19,18 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export const getContent = async ({ params }: any) => {
-  const response = await client.getEntries({
-    content_type: "post",
-    "fields.slug": params?.slug,
-  });
-
-  const content = await response?.items?.[0];
-
-  return content;
-};
-
 export default async function Post({ params }: any) {
+  const getContent = async (params: { slug: any }) => {
+    const response = await client.getEntries({
+      content_type: "post",
+      "fields.slug": params?.slug,
+    });
+
+    const content = await response?.items?.[0];
+
+    return content;
+  };
+
   const content = await getContent(params);
 
   const options: any = {
