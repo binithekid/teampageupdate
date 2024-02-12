@@ -1,12 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styles from "../../../Styles/modules/News/post.module.scss";
+import styles from "../../../Styles/modules/News/index.module.scss";
 import { client } from "../../../utils/client";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import Link from "next/link";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import useIsomorphicLayoutEffect from "../../../Hooks/useIsomorphicLayoutEffect";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
@@ -37,11 +36,8 @@ export default function Post({ params }: any) {
 
   const [content, setContent] = useState<any>(null);
 
-  useIsomorphicLayoutEffect(() => {
-    ScrollTrigger.refresh();
-  }, []);
-
   useEffect(() => {
+    ScrollTrigger.refresh();
     const fetchData = async () => {
       try {
         // Fetch content

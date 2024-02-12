@@ -1,16 +1,13 @@
 import Link from "next/link";
-import styles from "../../Styles/modules/News/post.module.scss";
+import styles from "../../Styles/modules/News/index.module.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
 import { usePageTransition } from "../PageTransition";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PostCard = ({ post }: any) => {
   const { title, slug, date, coverImage, excerpt } = post.fields;
-
-  const postRef = useRef(null);
 
   const { onLinkClick } = usePageTransition();
 
@@ -64,26 +61,6 @@ const PostCard = ({ post }: any) => {
     }
   }
 
-  // useEffect(() => {
-  //   const postElement = postRef.current;
-
-  //   if (postElement) {
-  //     const fadeInAnimation = gsap.fromTo(
-  //       postElement,
-  //       { opacity: 0 },
-  //       { opacity: 1, duration: 1 }
-  //     );
-
-  //     // Use ScrollTrigger to trigger animation when element comes into view
-  //     ScrollTrigger.create({
-  //       trigger: postElement,
-  //       start: "top 80%", // Start animation when the top of the element is 80% into the viewport
-  //       animation: fadeInAnimation,
-  //       once: true, // Only trigger animation once
-  //     });
-  //   }
-  // }, [postRef]);
-
   const postClick = (e: any) => {
     e.preventDefault();
     onLinkClick(e, `/news/${slug}`);
@@ -95,6 +72,7 @@ const PostCard = ({ post }: any) => {
       key={date}
       href={`/news/${slug}`}
       onClick={postClick}
+      prefetch={false}
     >
       <div className={styles.image_container}>
         <img
