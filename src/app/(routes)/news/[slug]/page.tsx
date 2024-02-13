@@ -22,36 +22,20 @@ export async function generateStaticParams() {
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Post({ params }: any) {
-  const getContent = async (params: { slug: any }) => {
-    const response = await client.getEntries({
-      content_type: "post",
-      "fields.slug": params?.slug,
-    });
+const getContent = async (params: { slug: any }) => {
+  const response = await client.getEntries({
+    content_type: "post",
+    "fields.slug": params?.slug,
+  });
 
-    const content = await response?.items?.[0];
+  const content = await response?.items?.[0];
 
-    return content;
-  };
+  return content;
+};
 
-  const [content, setContent] = useState<any>(null);
-
-  useEffect(() => {
-    ScrollTrigger.refresh();
-    const fetchData = async () => {
-      try {
-        // Fetch content
-        const fetchedContent = await getContent(params);
-        setContent(fetchedContent);
-
-        // Scroll to the top of the page
-      } catch (error) {
-        console.error("Error fetching content:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+export default async function Post({ params }: any) {
+  // const [content, setContent] = useState<any>(null);
+  const content = await getContent(params);
 
   const options: any = {
     renderNode: {
