@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "../../../Styles/modules/News/index.module.scss";
 import { client } from "../../../utils/client";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
