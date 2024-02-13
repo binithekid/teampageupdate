@@ -3,6 +3,7 @@ import styles from "../../Styles/modules/News/index.module.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { usePageTransition } from "../PageTransition";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,9 +76,12 @@ const PostCard = ({ post }: any) => {
       prefetch={false}
     >
       <div className={styles.image_container}>
-        <img
+        <Image
           src={`https:${coverImage.fields.file.url}`}
           alt={`Cover Image for ${title}`}
+          layout="fill"
+          objectFit="cover"
+          priority
         />
       </div>
       <div className={styles.info_container}>
